@@ -1,0 +1,46 @@
+[{
+    "id":1,
+    "text":"Antarctica - McMurdo, South Pole, Scott (New Zealand time)",
+    "val":"McMurdo",
+    "selected":true
+},{
+    "id":2,
+    "text":"Antarctica - Rothera Station, Adelaide Island",
+    "val":"Rothera"
+},{
+    "id":3,
+    "text":"Antarctica - Palmer Station, Anvers Island",
+    "val":"Palmer"
+},{
+    "id":4,
+    "text":"Antarctica - Mawson Station, Holme Bay",
+    "val":"Mawson"
+},{
+    "id":5,
+    "text":"Antarctica - Davis Station, Vestfold Hills",
+    "val":"Davis"
+},{
+    "id":6,
+    "text":"Antarctica - Casey Station, Bailey Peninsula",
+    "val":"Casey"
+},{
+    "id":7,
+    "text":"Antarctica - Vostok Station, Lake Vostok",
+    "val":"Vostok"
+},{
+    "id":8,
+    "text":"Antarctica - Dumont-d'Urville Station, Adelie Land",
+    "val":"DumontDUrville"
+},{
+    "id":9,
+    "text":"Antarctica - Syowa Station, E Ongul I",
+    "val":"Syowa"
+},{
+    "id":10,
+    "text":"Antarctica - Troll Station, Queen Maud Land",
+    "val":"Troll"
+},{
+    "id":11,
+    "text":"Australia - Macquarie Island",
+    "val":"Macquarie"
+}]

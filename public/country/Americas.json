@@ -1,0 +1,590 @@
+[{
+    "id":1,
+    "text":"Anguilla",
+    "val":"Anguilla",
+    "selected":true
+},{
+    "id":2,
+    "text":"Antigua & Barbuda",
+    "val":"Antigua"
+},{
+    "id":3,
+    "text":"Argentina - Buenos Aires (BA, CF)",
+    "val":"Argentina/Buenos_Aires"
+},{
+    "id":4,
+    "text":"Argentina - most locations (CB, CC, CN, ER, FM, MN, SE, SF)",
+    "val":"Argentina/Cordoba"
+},{
+    "id":5,
+    "text":"Argentina - (SA, LP, NQ, RN)",
+    "val":"Argentina/Salta"
+},{
+    "id":6,
+    "text":"Argentina - Jujuy (JY)",
+    "val":"Argentina/Jujuy"
+},{
+    "id":7,
+    "text":"Argentina - Tucuman (TM)",
+    "val":"Argentina/Tucuman"
+},{
+    "id":8,
+    "text":"Argentina - Catamarca (CT), Chubut (CH)",
+    "val":"Argentina/Catamarca"
+},{
+    "id":9,
+    "text":"Argentina - La Rioja (LR)",
+    "val":"Argentina/La_Rioja"
+},{
+    "id":10,
+    "text":"Argentina - San Juan (SJ)",
+    "val":"Argentina/San_Juan"
+},{
+    "id":11,
+    "text":"Argentina - Mendoza (MZ)",
+    "val":"Argentina/Mendoza"
+},{
+    "id":12,
+    "text":"Argentina - San Luis (SL)",
+    "val":"Argentina/San_Luis"
+},{
+    "id":13,
+    "text":"Argentina - Santa Cruz (SC)",
+    "val":"Argentina/Rio_Gallegos"
+},{
+    "id":14,
+    "text":"Argentina - Tierra del Fuego (TF)",
+    "val":"Argentina/Ushuaia"
+},{
+    "id":15,
+    "text":"Aruba",
+    "val":"Aruba"
+},{
+    "id":16,
+    "text":"Bahamas",
+    "val":"Nassau"
+},{
+    "id":17,
+    "text":"Barbados",
+    "val":"Barbados"
+},{
+    "id":18,
+    "text":"Belize",
+    "val":"Belize"
+},{
+    "id":19,
+    "text":"Bolivia",
+    "val":"La_Paz"
+},{
+    "id":20,
+    "text":"Brazil - Atlantic islands",
+    "val":"Noronha"
+},{
+    "id":21,
+    "text":"Brazil - Amapa, E Para",
+    "val":"Belem"
+},{
+    "id":22,
+    "text":"Brazil - NE Brazil (MA, PI, CE, RN, PB)",
+    "val":"Fortaleza"
+},{
+    "id":23,
+    "text":"Brazil - Pernambuco",
+    "val":"Recife"
+},{
+    "id":24,
+    "text":"Brazil - Tocantins",
+    "val":"Araguaina"
+},{
+    "id":25,
+    "text":"Brazil - Alagoas, Sergipe",
+    "val":"Maceio"
+},{
+    "id":26,
+    "text":"Brazil - Bahia",
+    "val":"Bahia"
+},{
+    "id":27,
+    "text":"Brazil - S & SE Brazil (GO, DF, MG, ES, RJ, SP, PR, SC, RS)",
+    "val":"Sao_Paulo"
+},{
+    "id":28,
+    "text":"Brazil - Mato Grosso do Sul",
+    "val":"Campo_Grande"
+},{
+    "id":29,
+    "text":"Brazil - Mato Grosso",
+    "val":"Cuiaba"
+},{
+    "id":30,
+    "text":"Brazil - W Para",
+    "val":"Santarem"
+},{
+    "id":31,
+    "text":"Brazil - Rondonia",
+    "val":"Porto_Velho"
+},{
+    "id":32,
+    "text":"Brazil - Roraima",
+    "val":"Boa_Vista"
+},{
+    "id":33,
+    "text":"Brazil - E Amazonas",
+    "val":"Manaus"
+},{
+    "id":34,
+    "text":"Brazil - W Amazonas",
+    "val":"Eirunepe"
+},{
+    "id":35,
+    "text":"Brazil - Acre",
+    "val":"Rio_Branco"
+},{
+    "id":36,
+    "text":"Canada - Newfoundland Time, including SE Labrador",
+    "val":"St_Johns"
+},{
+    "id":37,
+    "text":"Canada - Atlantic Time - Nova Scotia (peninsula), PEI",
+    "val":"Halifax"
+},{
+    "id":38,
+    "text":"Canada - Atlantic Time - Nova Scotia (Cape Breton)",
+    "val":"Glace_Bay"
+},{
+    "id":39,
+    "text":"Canada - Atlantic Time - New Brunswick",
+    "val":"Moncton"
+},{
+    "id":40,
+    "text":"Canada - Atlantic Time - Labrador - most locations",
+    "val":"Goose_Bay"
+},{
+    "id":41,
+    "text":"Canada - Atlantic Standard Time - Quebec - Lower North Shore",
+    "val":"Blanc-Sablon"
+},{
+    "id":42,
+    "text":"Canada - Eastern Time - Ontario & Quebec - most locations",
+    "val":"Toronto"
+},{
+    "id":43,
+    "text":"Canada - Eastern Time - Ontario & Quebec - places that did not observe DST 1967-1973",
+    "val":"Nipigon"
+},{
+    "id":44,
+    "text":"Canada - Eastern Time - Thunder Bay, Ontario",
+    "val":"Thunder_Bay"
+},{
+    "id":45,
+    "text":"Canada - Eastern Time - east Nunavut - most locations",
+    "val":"Iqaluit"
+},{
+    "id":46,
+    "text":"Canada - Eastern Time - Pangnirtung, Nunavut",
+    "val":"Pangnirtung"
+},{
+    "id":47,
+    "text":"Canada - Central Time - Resolute, Nunavut",
+    "val":"Resolute"
+},{
+    "id":48,
+    "text":"Canada - Eastern Standard Time - Atikokan, Ontario and Southampton I, Nunavut",
+    "val":"Atikokan"
+},{
+    "id":49,
+    "text":"Canada - Central Time - central Nunavut",
+    "val":"Rankin_Inlet"
+},{
+    "id":50,
+    "text":"Canada - Central Time - Manitoba & west Ontario",
+    "val":"Winnipeg"
+},{
+    "id":51,
+    "text":"Canada - Central Time - Rainy River & Fort Frances, Ontario",
+    "val":"Rainy_River"
+},{
+    "id":52,
+    "text":"Canada - Central Standard Time - Saskatchewan - most locations",
+    "val":"Regina"
+},{
+    "id":53,
+    "text":"Canada - Central Standard Time - Saskatchewan - midwest",
+    "val":"Swift_Current"
+},{
+    "id":54,
+    "text":"Canada - Mountain Time - Alberta, east British Columbia & west Saskatchewan",
+    "val":"Edmonton"
+},{
+    "id":55,
+    "text":"Canada - Mountain Time - west Nunavut",
+    "val":"Cambridge_Bay"
+},{
+    "id":56,
+    "text":"Canada - Mountain Time - central Northwest Territories",
+    "val":"Yellowknife"
+},{
+    "id":57,
+    "text":"Canada - Mountain Time - west Northwest Territories",
+    "val":"Inuvik"
+},{
+    "id":58,
+    "text":"Canada - Mountain Standard Time - Creston, British Columbia",
+    "val":"Creston"
+},{
+    "id":59,
+    "text":"Canada - Mountain Standard Time - Dawson Creek & Fort Saint John, British Columbia",
+    "val":"Dawson_Creek"
+},{
+    "id":60,
+    "text":"Canada - Mountain Standard Time - Fort Nelson, British Columbia",
+    "val":"Fort_Nelson"
+},{
+    "id":61,
+    "text":"Canada - Pacific Time - west British Columbia",
+    "val":"Vancouver"
+},{
+    "id":62,
+    "text":"Canada - Pacific Time - south Yukon",
+    "val":"Whitehorse"
+},{
+    "id":63,
+    "text":"Canada - Pacific Time - north Yukon",
+    "val":"Dawson"
+},{
+    "id":64,
+    "text":"Caribbean Netherlands",
+    "val":"Kralendijk"
+},{
+    "id":65,
+    "text":"Cayman Islands",
+    "val":"Cayman"
+},{
+    "id":66,
+    "text":"Chile - most locations",
+    "val":"Santiago"
+},{
+    "id":68,
+    "text":"Colombia",
+    "val":"Bogota"
+},{
+    "id":69,
+    "text":"Costa Rica",
+    "val":"Costa_Rica"
+},{
+    "id":70,
+    "text":"Cuba",
+    "val":"Havana"
+},{
+    "id":71,
+    "text":"Curacao",
+    "val":"Curacao"
+},{
+    "id":72,
+    "text":"Dominica",
+    "val":"Dominica"
+},{
+    "id":73,
+    "text":"Dominican Republic",
+    "val":"Santo_Domingo"
+},{
+    "id":74,
+    "text":"Ecuador - mainland",
+    "val":"Guayaquil"
+},{
+    "id":75,
+    "text":"El Salvador",
+    "val":"El_Salvador"
+},{
+    "id":76,
+    "text":"French Guiana",
+    "val":"Cayenne"
+},{
+    "id":77,
+    "text":"Greenland - most locations",
+    "val":"Godthab"
+},{
+    "id":78,
+    "text":"Greenland - east coast, north of Scoresbysund",
+    "val":"Danmarkshavn"
+},{
+    "id":79,
+    "text":"Greenland - Scoresbysund / Ittoqqortoormiit",
+    "val":"Scoresbysund"
+},{
+    "id":80,
+    "text":"Greenland - Thule / Pituffik",
+    "val":"Thule"
+},{
+    "id":81,
+    "text":"Grenada",
+    "val":"Grenada"
+},{
+    "id":82,
+    "text":"Guadeloupe",
+    "val":"Guadeloupe"
+},{
+    "id":83,
+    "text":"Guatemala",
+    "val":"Guatemala"
+},{
+    "id":84,
+    "text":"Guyana",
+    "val":"Guyana"
+},{
+    "id":85,
+    "text":"Haiti",
+    "val":"Port-au-Prince"
+},{
+    "id":86,
+    "text":"Honduras",
+    "val":"Tegucigalpa"
+},{
+    "id":87,
+    "text":"Jamaica",
+    "val":"Jamaica"
+},{
+    "id":88,
+    "text":"Martinique",
+    "val":"Martinique"
+},{
+    "id":89,
+    "text":"Mexico - Central Time - most locations",
+    "val":"Mexico_City"
+},{
+    "id":90,
+    "text":"Mexico - Eastern Standard Time - Quintana Roo",
+    "val":"Cancun"
+},{
+    "id":91,
+    "text":"Mexico - Central Time - Campeche, Yucatan",
+    "val":"Merida"
+},{
+    "id":92,
+    "text":"Mexico - Mexican Central Time - Coahuila, Durango, Nuevo Leon, Tamaulipas away from US border",
+    "val":"Monterrey"
+},{
+    "id":93,
+    "text":"Mexico - US Central Time - Coahuila, Durango, Nuevo Leon, Tamaulipas near US border",
+    "val":"Matamoros"
+},{
+    "id":94,
+    "text":"Mexico - Mountain Time - S Baja, Nayarit, Sinaloa",
+    "val":"Mazatlan"
+},{
+    "id":95,
+    "text":"Mexico - Mexican Mountain Time - Chihuahua away from US border",
+    "val":"Chihuahua"
+},{
+    "id":96,
+    "text":"Mexico - US Mountain Time - Chihuahua near US border",
+    "val":"Ojinaga"
+},{
+    "id":97,
+    "text":"Mexico - Mountain Standard Time - Sonora",
+    "val":"Hermosillo"
+},{
+    "id":98,
+    "text":"Mexico - US Pacific Time - Baja California near US border",
+    "val":"Tijuana"
+},{
+    "id":99,
+    "text":"Mexico - Mexican Pacific Time - Baja California away from US border",
+    "val":"Santa_Isabel"
+},{
+    "id":100,
+    "text":"Mexico - Mexican Central Time - Bahia de Banderas",
+    "val":"Bahia_Banderas"
+},{
+    "id":101,
+    "text":"Montserrat",
+    "val":"Montserrat"
+},{
+    "id":102,
+    "text":"Nicaragua",
+    "val":"Managua"
+},{
+    "id":103,
+    "text":"Panama",
+    "val":"Panama"
+},{
+    "id":104,
+    "text":"Paraguay",
+    "val":"Asuncion"
+},{
+    "id":105,
+    "text":"Peru",
+    "val":"Lima"
+},{
+    "id":106,
+    "text":"Puerto Rico",
+    "val":"Puerto_Rico"
+},{
+    "id":107,
+    "text":"St Barthelemy",
+    "val":"St_Barthelemy"
+},{
+    "id":108,
+    "text":"St Kitts & Nevis",
+    "val":"St_Kitts"
+},{
+    "id":109,
+    "text":"St Lucia",
+    "val":"St_Lucia"
+},{
+    "id":110,
+    "text":"St Maarten (Dutch part)",
+    "val":"Lower_Princes"
+},{
+    "id":111,
+    "text":"St Martin (French part)",
+    "val":"Marigot"
+},{
+    "id":112,
+    "text":"St Pierre & Miquelon",
+    "val":"Miquelon"
+},{
+    "id":113,
+    "text":"St Vincent",
+    "val":"St_Vincent"
+},{
+    "id":114,
+    "text":"Suriname",
+    "val":"Paramaribo"
+},{
+    "id":115,
+    "text":"Trinidad & Tobago",
+    "val":"Port_of_Spain"
+},{
+    "id":116,
+    "text":"Turks & Caicos Is",
+    "val":"Grand_Turk"
+},{
+    "id":117,
+    "text":"United States - Eastern Time",
+    "val":"New_York"
+},{
+    "id":118,
+    "text":"United States - Eastern Time - Michigan - most locations",
+    "val":"Detroit"
+},{
+    "id":119,
+    "text":"United States - Eastern Time - Kentucky - Louisville area",
+    "val":"Kentucky/Louisville"
+},{
+    "id":120,
+    "text":"United States - Eastern Time - Kentucky - Wayne County",
+    "val":"Kentucky/Monticello"
+},{
+    "id":121,
+    "text":"United States - Eastern Time - Indiana - most locations",
+    "val":"Indiana/Indianapolis"
+},{
+    "id":122,
+    "text":"United States - Eastern Time - Indiana - Daviess, Dubois, Knox & Martin Counties",
+    "val":"Indiana/Vincennes"
+},{
+    "id":123,
+    "text":"United States - Eastern Time - Indiana - Pulaski County",
+    "val":"Indiana/Winamac"
+},{
+    "id":124,
+    "text":"United States - Eastern Time - Indiana - Crawford County",
+    "val":"Indiana/Marengo"
+},{
+    "id":125,
+    "text":"United States - Eastern Time - Indiana - Pike County",
+    "val":"Indiana/Petersburg"
+},{
+    "id":126,
+    "text":"United States - Eastern Time - Indiana - Switzerland County",
+    "val":"Indiana/Vevay"
+},{
+    "id":127,
+    "text":"United States - Central Time",
+    "val":"Chicago"
+},{
+    "id":128,
+    "text":"United States - Central Time - Indiana - Perry County",
+    "val":"Indiana/Tell_City"
+},{
+    "id":129,
+    "text":"United States - Central Time - Indiana - Starke County",
+    "val":"Indiana/Knox"
+},{
+    "id":130,
+    "text":"United States - Central Time - Michigan - Dickinson, Gogebic, Iron & Menominee Counties",
+    "val":"Menominee"
+},{
+    "id":131,
+    "text":"United States - Central Time - North Dakota - Oliver County",
+    "val":"North_Dakota/Center"
+},{
+    "id":132,
+    "text":"United States - Central Time - North Dakota - Morton County (except Mandan area)",
+    "val":"North_Dakota/New_Salem"
+},{
+    "id":133,
+    "text":"United States - Central Time - North Dakota - Mercer County",
+    "val":"North_Dakota/Beulah"
+},{
+    "id":134,
+    "text":"United States - Mountain Time",
+    "val":"Denver"
+},{
+    "id":135,
+    "text":"United States - Mountain Time - south Idaho & east Oregon",
+    "val":"Boise"
+},{
+    "id":136,
+    "text":"United States - Mountain Standard Time - Arizona (except Navajo)",
+    "val":"Phoenix"
+},{
+    "id":137,
+    "text":"United States - Pacific Time",
+    "val":"Los_Angeles"
+},{
+    "id":138,
+    "text":"United States - Pacific Standard Time - Annette Island, Alaska",
+    "val":"Metlakatla"
+},{
+    "id":139,
+    "text":"United States - Alaska Time",
+    "val":"Anchorage"
+},{
+    "id":140,
+    "text":"United States - Alaska Time - Alaska panhandle",
+    "val":"Juneau"
+},{
+    "id":141,
+    "text":"United States - Alaska Time - southeast Alaska panhandle",
+    "val":"Sitka"
+},{
+    "id":142,
+    "text":"United States - Alaska Time - Alaska panhandle neck",
+    "val":"Yakutat"
+},{
+    "id":143,
+    "text":"United States - Alaska Time - west Alaska",
+    "val":"Nome"
+},{
+    "id":144,
+    "text":"United States - Aleutian Islands",
+    "val":"Adak"
+},{
+    "id":145,
+    "text":"Uruguay",
+    "val":"Montevideo"
+},{
+    "id":146,
+    "text":"Venezuela",
+    "val":"Caracas"
+},{
+    "id":147,
+    "text":"Virgin Islands (UK)",
+    "val":"Tortola"
+},{
+    "id":148,
+    "text":"Virgin Islands (US)",
+    "val":"St_Thomas"
+}]

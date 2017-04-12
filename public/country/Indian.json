@@ -1,0 +1,46 @@
+[{
+    "id":1,
+    "text":"British Indian Ocean Territory",
+    "val":"Chagos",
+    "selected":true
+},{
+    "id":2,
+    "text":"Christmas Island",
+    "val":"Christmas"
+},{
+    "id":3,
+    "text":"Cocos (Keeling) Islands",
+    "val":"Cocos"
+},{
+    "id":4,
+    "text":"Comoros",
+    "val":"Comoro"
+},{
+    "id":5,
+    "text":"French Southern & Antarctic Lands",
+    "val":"Kerguelen"
+},{
+    "id":6,
+    "text":"Madagascar",
+    "val":"Antananarivo"
+},{
+    "id":7,
+    "text":"Maldives",
+    "val":"Maldives"
+},{
+    "id":8,
+    "text":"Mauritius",
+    "val":"Mauritius"
+},{
+    "id":9,
+    "text":"Mayotte",
+    "val":"Mayotte"
+},{
+    "id":10,
+    "text":"Réunion",
+    "val":"Reunion"
+},{
+    "id":11,
+    "text":"Seychelles",
+    "val":"Mahe"
+}]

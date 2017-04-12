@@ -1,0 +1,50 @@
+[{
+    "id":1,
+    "text":"Australia - Lord Howe Island",
+    "val":"Lord_Howe",
+    "selected":true
+},{
+    "id":2,
+    "text":"Australia - Tasmania - most locations",
+    "val":"Hobart"
+},{
+    "id":3,
+    "text":"Australia - Tasmania - King Island",
+    "val":"Currie"
+},{
+    "id":4,
+    "text":"Australia - Victoria",
+    "val":"Melbourne"
+},{
+    "id":5,
+    "text":"Australia - New South Wales - most locations",
+    "val":"Sydney"
+},{
+    "id":6,
+    "text":"Australia - New South Wales - Yancowinna",
+    "val":"Broken_Hill"
+},{
+    "id":7,
+    "text":"Australia - Queensland - most locations",
+    "val":"Brisbane"
+},{
+    "id":8,
+    "text":"Australia - Queensland - Holiday Islands",
+    "val":"Lindeman"
+},{
+    "id":9,
+    "text":"Australia - South Australia",
+    "val":"Adelaide"
+},{
+    "id":10,
+    "text":"Australia - Northern Territory",
+    "val":"Darwin"
+},{
+    "id":11,
+    "text":"Australia - Western Australia - most locations",
+    "val":"Perth"
+},{
+    "id":12,
+    "text":"Australia - Western Australia - Eucla area",
+    "val":"Eucla"
+}]

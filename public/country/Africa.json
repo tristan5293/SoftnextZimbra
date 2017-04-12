@@ -1,0 +1,210 @@
+[{
+    "id":1,
+    "text":"Algeria",
+    "val":"Algiers",
+    "selected":true
+},{
+    "id":2,
+    "text":"Angola",
+    "val":"Luanda"
+},{
+    "id":3,
+    "text":"Benin",
+    "val":"Porto-Novo"
+},{
+    "id":4,
+    "text":"Botswana",
+    "val":"Gaborone"
+},{
+    "id":5,
+    "text":"Burkina Faso",
+    "val":"Ouagadougou"
+},{
+    "id":6,
+    "text":"Burundi",
+    "val":"Bujumbura"
+},{
+    "id":7,
+    "text":"Cameroon",
+    "val":"Douala"
+},{
+    "id":8,
+    "text":"Central African Rep.",
+    "val":"Bangui"
+},{
+    "id":9,
+    "text":"Chad",
+    "val":"Ndjamena"
+},{
+    "id":10,
+    "text":"west Dem. Rep. of Congo",
+    "val":"Kinshasa"
+},{
+    "id":11,
+    "text":"east Dem. Rep. of Congo",
+    "val":"Lubumbashi"
+},{
+    "id":12,
+    "text":"Congo (Rep.)",
+    "val":"Brazzaville"
+},{
+    "id":13,
+    "text":"Côte d'Ivoire",
+    "val":"Abidjan"
+},{
+    "id":14,
+    "text":"Djibouti",
+    "val":"Djibouti"
+},{
+    "id":15,
+    "text":"Egypt",
+    "val":"Cairo"
+},{
+    "id":16,
+    "text":"Equatorial Guinea",
+    "val":"Malabo"
+},{
+    "id":17,
+    "text":"Eritrea",
+    "val":"Asmara"
+},{
+    "id":18,
+    "text":"Ethiopia",
+    "val":"Addis_Ababa"
+},{
+    "id":19,
+    "text":"Gabon",
+    "val":"Libreville"
+},{
+    "id":20,
+    "text":"Gambia",
+    "val":"Banjul"
+},{
+    "id":21,
+    "text":"Ghana",
+    "val":"Accra"
+},{
+    "id":22,
+    "text":"Guinea",
+    "val":"Conakry"
+},{
+    "id":23,
+    "text":"Guinea-Bissau",
+    "val":"Bissau"
+},{
+    "id":24,
+    "text":"Kenya",
+    "val":"Nairobi"
+},{
+    "id":25,
+    "text":"Lesotho",
+    "val":"Maseru"
+},{
+    "id":26,
+    "text":"Liberia",
+    "val":"Monrovia"
+},{
+    "id":27,
+    "text":"Libya",
+    "val":"Tripoli"
+},{
+    "id":28,
+    "text":"Malawi",
+    "val":"Blantyre"
+},{
+    "id":29,
+    "text":"Mali",
+    "val":"Bamako"
+},{
+    "id":30,
+    "text":"Mauritania",
+    "val":"Nouakchott"
+},{
+    "id":31,
+    "text":"Morocco",
+    "val":"Casablanca"
+},{
+    "id":32,
+    "text":"Mozambique",
+    "val":"Maputo"
+},{
+    "id":33,
+    "text":"Namibia",
+    "val":"Windhoek"
+},{
+    "id":34,
+    "text":"Niger",
+    "val":"Niamey"
+},{
+    "id":35,
+    "text":"Nigeria",
+    "val":"Lagos"
+},{
+    "id":36,
+    "text":"Rwanda",
+    "val":"Kigali"
+},{
+    "id":37,
+    "text":"Sao Tome & Principe",
+    "val":"Sao_Tome"
+},{
+    "id":38,
+    "text":"Senegal",
+    "val":"Dakar"
+},{
+    "id":39,
+    "text":"Sierra Leone",
+    "val":"Freetown"
+},{
+    "id":40,
+    "text":"Somalia",
+    "val":"Mogadishu"
+},{
+    "id":41,
+    "text":"South Africa",
+    "val":"Johannesburg"
+},{
+    "id":42,
+    "text":"South Sudan",
+    "val":"Juba"
+},{
+    "id":43,
+    "text":"Spain - Ceuta & Melilla",
+    "val":"Ceuta"
+},{
+    "id":44,
+    "text":"Sudan",
+    "val":"Khartoum"
+},{
+    "id":45,
+    "text":"Swaziland",
+    "val":"Mbabane"
+},{
+    "id":46,
+    "text":"Tanzania",
+    "val":"Dar_es_Salaam"
+},{
+    "id":47,
+    "text":"Togo",
+    "val":"Lome"
+},{
+    "id":48,
+    "text":"Tunisia",
+    "val":"Tunis"
+},{
+    "id":49,
+    "text":"Uganda",
+    "val":"Kampala"
+},{
+    "id":50,
+    "text":"Western Sahara",
+    "val":"El_Aaiun"
+},{
+    "id":51,
+    "text":"Zambia",
+    "val":"Lusaka"
+},{
+    "id":52,
+    "text":"Zimbabwe",
+    "val":"Harare"
+}]

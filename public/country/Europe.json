@@ -1,0 +1,238 @@
+[{
+    "id":1,
+    "text":"Åland Islands",
+    "val":"Mariehamn",
+    "selected":true
+},{
+    "id":2,
+    "text":"Albania",
+    "val":"Tirane"
+},{
+    "id":3,
+    "text":"Andorra",
+    "val":"Andorra"
+},{
+    "id":4,
+    "text":"Austria",
+    "val":"Vienna"
+},{
+    "id":5,
+    "text":"Belarus",
+    "val":"Minsk"
+},{
+    "id":6,
+    "text":"Belgium",
+    "val":"Brussels"
+},{
+    "id":7,
+    "text":"Bosnia & Herzegovina",
+    "val":"Sarajevo"
+},{
+    "id":8,
+    "text":"Britain (UK)",
+    "val":"London"
+},{
+    "id":9,
+    "text":"Bulgaria",
+    "val":"Sofia"
+},{
+    "id":10,
+    "text":"Croatia",
+    "val":"Zagreb"
+},{
+    "id":11,
+    "text":"Czech Republic",
+    "val":"Prague"
+},{
+    "id":12,
+    "text":"Denmark",
+    "val":"Copenhagen"
+},{
+    "id":13,
+    "text":"Estonia",
+    "val":"Tallinn"
+},{
+    "id":14,
+    "text":"Finland",
+    "val":"Helsinki"
+},{
+    "id":15,
+    "text":"France",
+    "val":"Paris"
+},{
+    "id":16,
+    "text":"Germany - most locations",
+    "val":"Berlin"
+},{
+    "id":17,
+    "text":"Germany - Busingen",
+    "val":"Busingen"
+},{
+    "id":18,
+    "text":"Gibraltar",
+    "val":"Gibraltar"
+},{
+    "id":19,
+    "text":"Greece",
+    "val":"Athens"
+},{
+    "id":20,
+    "text":"Guernsey",
+    "val":"Guernsey"
+},{
+    "id":21,
+    "text":"Hungary",
+    "val":"Budapest"
+},{
+    "id":22,
+    "text":"Ireland",
+    "val":"Dublin"
+},{
+    "id":23,
+    "text":"Isle of Man",
+    "val":"Isle_of_Man"
+},{
+    "id":24,
+    "text":"Italy",
+    "val":"Rome"
+},{
+    "id":25,
+    "text":"Jersey",
+    "val":"Jersey"
+},{
+    "id":26,
+    "text":"Latvia",
+    "val":"Riga"
+},{
+    "id":27,
+    "text":"Liechtenstein",
+    "val":"Vaduz"
+},{
+    "id":28,
+    "text":"Lithuania",
+    "val":"Vilnius"
+},{
+    "id":29,
+    "text":"Luxembourg",
+    "val":"Luxembourg"
+},{
+    "id":30,
+    "text":"Macedonia",
+    "val":"Skopje"
+},{
+    "id":31,
+    "text":"Malta",
+    "val":"Malta"
+},{
+    "id":32,
+    "text":"Moldova",
+    "val":"Chisinau"
+},{
+    "id":33,
+    "text":"Monaco",
+    "val":"Monaco"
+},{
+    "id":34,
+    "text":"Montenegro",
+    "val":"Podgorica"
+},{
+    "id":35,
+    "text":"Netherlands",
+    "val":"Amsterdam"
+},{
+    "id":36,
+    "text":"Norway",
+    "val":"Oslo"
+},{
+    "id":37,
+    "text":"Poland",
+    "val":"Warsaw"
+},{
+    "id":38,
+    "text":"Portugal - mainland",
+    "val":"Lisbon"
+},{
+    "id":39,
+    "text":"Portugal - Madeira Islands",
+    "val":"Madeira"
+},{
+    "id":40,
+    "text":"Portugal - Azores",
+    "val":"Azores"
+},{
+    "id":41,
+    "text":"Romania",
+    "val":"Bucharest"
+},{
+    "id":42,
+    "text":"Portugal - mainland",
+    "val":"Lisbon"
+},{
+    "id":43,
+    "text":"Russia - Moscow-01 - Kaliningrad",
+    "val":"Kaliningrad"
+},{
+    "id":44,
+    "text":"Russia - Moscow+00 - west Russia",
+    "val":"Moscow"
+},{
+    "id":45,
+    "text":"Russia - Moscow+00 - Crimea",
+    "val":"Simferopol"
+},{
+    "id":46,
+    "text":"Russia - Moscow+00 - Caspian Sea",
+    "val":"Volgograd"
+},{
+    "id":47,
+    "text":"Russia - Moscow+00 (Moscow+01 after 2014-10-26) - Samara, Udmurtia",
+    "val":"Samara"
+},{
+    "id":48,
+    "text":"San Marino",
+    "val":"San_Marino"
+},{
+    "id":49,
+    "text":"Serbia",
+    "val":"Belgrade"
+},{
+    "id":50,
+    "text":"Slovakia",
+    "val":"Bratislava"
+},{
+    "id":51,
+    "text":"Slovenia",
+    "val":"Ljubljana"
+},{
+    "id":52,
+    "text":"Spain - mainland",
+    "val":"Madrid"
+},{
+    "id":53,
+    "text":"Sweden",
+    "val":"Stockholm"
+},{
+    "id":54,
+    "text":"Switzerland",
+    "val":"Zurich"
+},{
+    "id":55,
+    "text":"Turkey",
+    "val":"Istanbul"
+},{
+    "id":56,
+    "text":"Ukraine - most locations",
+    "val":"Kiev"
+},{
+    "id":57,
+    "text":"Ukraine - Ruthenia",
+    "val":"Uzhgorod"
+},{
+    "id":58,
+    "text":"Ukraine - Zaporozh'ye, E Lugansk / Zaporizhia, E Luhansk",
+    "val":"Zaporozhye"
+},{
+    "id":59,
+    "text":"Vatican City",
+    "val":"Vatican"
+}]

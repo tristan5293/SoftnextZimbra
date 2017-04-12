@@ -1,0 +1,314 @@
+[{
+    "id":1,
+    "text":"Afghanistan",
+    "val":"Kabul",
+    "selected":true
+},{
+    "id":2,
+    "text":"Armenia",
+    "val":"Yerevan"
+},{
+    "id":3,
+    "text":"Azerbaijan",
+    "val":"Baku"
+},{
+    "id":4,
+    "text":"Bahrain",
+    "val":"Bahrain"
+},{
+    "id":5,
+    "text":"Bangladesh",
+    "val":"Dhaka"
+},{
+    "id":6,
+    "text":"Bhutan",
+    "val":"Thimphu"
+},{
+    "id":7,
+    "text":"Brunei",
+    "val":"Brunei"
+},{
+    "id":8,
+    "text":"Cambodia",
+    "val":"Phnom_Penh"
+},{
+    "id":9,
+    "text":"China - Beijing Time",
+    "val":"Shanghai"
+},{
+    "id":10,
+    "text":"China - Xinjiang Time",
+    "val":"Urumqi"
+},{
+    "id":11,
+    "text":"Cyprus",
+    "val":"Nicosia"
+},{
+    "id":12,
+    "text":"East Timor",
+    "val":"Dili"
+},{
+    "id":13,
+    "text":"Georgia",
+    "val":"Tbilisi"
+},{
+    "id":14,
+    "text":"Hong Kong",
+    "val":""
+},{
+    "id":15,
+    "text":"India",
+    "val":"Kolkata"
+},{
+    "id":16,
+    "text":"Indonesia - Java & Sumatra",
+    "val":"Jakarta"
+},{
+    "id":17,
+    "text":"Indonesia - west & central Borneo",
+    "val":"Pontianak"
+},{
+    "id":18,
+    "text":"Indonesia - east & south Borneo, Sulawesi (Celebes), Bali, Nusa Tengarra, west Timor",
+    "val":"Makassar"
+},{
+    "id":19,
+    "text":"Indonesia - west New Guinea (Irian Jaya) & Malukus (Moluccas)",
+    "val":"Jayapura"
+},{
+    "id":20,
+    "text":"Iran",
+    "val":"Tehran"
+},{
+    "id":21,
+    "text":"Iraq",
+    "val":"Baghdad"
+},{
+    "id":22,
+    "text":"Israel",
+    "val":"Jerusalem"
+},{
+    "id":23,
+    "text":"Japan",
+    "val":"Tokyo"
+},{
+    "id":24,
+    "text":"Jordan",
+    "val":"Amman"
+},{
+    "id":25,
+    "text":"Kazakhstan - most locations",
+    "val":"Almaty"
+},{
+    "id":26,
+    "text":"Kazakhstan - Qyzylorda (Kyzylorda, Kzyl-Orda)",
+    "val":"Qyzylorda"
+},{
+    "id":27,
+    "text":"Kazakhstan - Aqtobe (Aktobe)",
+    "val":"Aqtobe"
+},{
+    "id":28,
+    "text":"Kazakhstan - Atyrau (Atirau, Gur'yev), Mangghystau (Mankistau)",
+    "val":"Aqtau"
+},{
+    "id":29,
+    "text":"Kazakhstan - West Kazakhstan",
+    "val":"Oral"
+},{
+    "id":30,
+    "text":"Korea (North)",
+    "val":"Pyongyang"
+},{
+    "id":31,
+    "text":"Korea (South)",
+    "val":"Seoul"
+},{
+    "id":32,
+    "text":"Kuwait",
+    "val":"Kuwait"
+},{
+    "id":33,
+    "text":"Kyrgyzstan",
+    "val":"Bishkek"
+},{
+    "id":34,
+    "text":"Laos",
+    "val":"Vientiane"
+},{
+    "id":35,
+    "text":"Lebanon",
+    "val":"Beirut"
+},{
+    "id":36,
+    "text":"Macau",
+    "val":"Macau"
+},{
+    "id":37,
+    "text":"Malaysia - peninsular Malaysia",
+    "val":"Kuala_Lumpur"
+},{
+    "id":38,
+    "text":"Malaysia - Sabah & Sarawak",
+    "val":"Kuching"
+},{
+    "id":39,
+    "text":"Mongolia - most locations",
+    "val":"Ulaanbaatar"
+},{
+    "id":40,
+    "text":"Mongolia - Bayan-Olgiy, Govi-Altai, Hovd, Uvs, Zavkhan",
+    "val":"Hovd"
+},{
+    "id":41,
+    "text":"Mongolia - Dornod, Sukhbaatar",
+    "val":"Choibalsan"
+},{
+    "id":42,
+    "text":"Myanmar",
+    "val":"Rangoon"
+},{
+    "id":43,
+    "text":"Nepal",
+    "val":"Kathmandu"
+},{
+    "id":44,
+    "text":"Oman",
+    "val":"Muscat"
+},{
+    "id":45,
+    "text":"Pakistan",
+    "val":"Karachi"
+},{
+    "id":46,
+    "text":"Palestine - Gaza Strip",
+    "val":"Gaza"
+},{
+    "id":47,
+    "text":"Palestine - West Bank",
+    "val":"Hebron"
+},{
+    "id":48,
+    "text":"Philippines",
+    "val":"Manila"
+},{
+    "id":49,
+    "text":"Qatar",
+    "val":"Qatar"
+},{
+    "id":50,
+    "text":"Russia - Moscow+02 - Urals",
+    "val":"Yekaterinburg"
+},{
+    "id":51,
+    "text":"Russia - Moscow+03 - west Siberia",
+    "val":"Omsk"
+},{
+    "id":52,
+    "text":"Russia - Moscow+03 - Novosibirsk",
+    "val":"Novosibirsk"
+},{
+    "id":53,
+    "text":"Russia - Moscow+03 (Moscow+04 after 2014-10-26) - Kemerovo",
+    "val":"Novokuznetsk"
+},{
+    "id":54,
+    "text":"Russia - Moscow+04 - Yenisei River",
+    "val":"Krasnoyarsk"
+},{
+    "id":55,
+    "text":"Russia - Moscow+05 - Lake Baikal",
+    "val":"Irkutsk"
+},{
+    "id":56,
+    "text":"Russia - Moscow+06 (Moscow+05 after 2014-10-26) - Zabaykalsky",
+    "val":"Chita"
+},{
+    "id":57,
+    "text":"Russia - Moscow+06 - Lena River",
+    "val":"Yakutsk"
+},{
+    "id":58,
+    "text":"Russia - Moscow+06 - Tomponsky, Ust-Maysky",
+    "val":"Khandyga"
+},{
+    "id":59,
+    "text":"Russia - Moscow+07 - Amur River",
+    "val":"Vladivostok"
+},{
+    "id":60,
+    "text":"Russia - Moscow+07 - Sakhalin Island",
+    "val":"Sakhalin"
+},{
+    "id":61,
+    "text":"Russia - Moscow+07 - Oymyakonsky",
+    "val":"Ust-Nera"
+},{
+    "id":62,
+    "text":"Russia - Moscow+08 (Moscow+07 after 2014-10-26) - Magadan",
+    "val":"Magadan"
+},{
+    "id":63,
+    "text":"Russia - Moscow+08 - E Sakha, N Kuril Is",
+    "val":"Srednekolymsk"
+},{
+    "id":64,
+    "text":"Russia - Moscow+08 (Moscow+09 after 2014-10-26) - Kamchatka",
+    "val":"Kamchatka"
+},{
+    "id":65,
+    "text":"Russia - Moscow+08 (Moscow+09 after 2014-10-26) - Bering Sea",
+    "val":"Anadyr"
+},{
+    "id":66,
+    "text":"Saudi Arabia",
+    "val":"Riyadh"
+},{
+    "id":67,
+    "text":"Singapore",
+    "val":"Singapore"
+},{
+    "id":68,
+    "text":"Sri Lanka",
+    "val":"Colombo"
+},{
+    "id":69,
+    "text":"Syria",
+    "val":"Damascus"
+},{
+    "id":70,
+    "text":"Taiwan",
+    "val":"Taipei"
+},{
+    "id":71,
+    "text":"Tajikistan",
+    "val":"Dushanbe"
+},{
+    "id":72,
+    "text":"Thailand",
+    "val":"Bangkok"
+},{
+    "id":73,
+    "text":"Turkmenistan",
+    "val":"Ashgabat"
+},{
+    "id":74,
+    "text":"United Arab Emirates",
+    "val":"Dubai"
+},{
+    "id":75,
+    "text":"Uzbekistan - west Uzbekistan",
+    "val":"Samarkand"
+},{
+    "id":76,
+    "text":"Uzbekistan - east Uzbekistan",
+    "val":"Tashkent"
+},{
+    "id":77,
+    "text":"Vietnam",
+    "val":"Ho_Chi_Minh"
+},{
+    "id":78,
+    "text":"Yemen",
+    "val":"Aden"
+}]

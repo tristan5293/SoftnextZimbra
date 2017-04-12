@@ -1,0 +1,42 @@
+[{
+    "id":1,
+    "text":"Bermuda",
+    "val":"Bermuda",
+    "selected":true
+},{
+    "id":2,
+    "text":"Cape Verde",
+    "val":"Cape_Verde"
+},{
+    "id":3,
+    "text":"Falkland Islands",
+    "val":"Stanley"
+},{
+    "id":4,
+    "text":"Faroe Islands",
+    "val":"Faroe"
+},{
+    "id":5,
+    "text":"Iceland",
+    "val":"Reykjavik"
+},{
+    "id":6,
+    "text":"Portugal - Madeira Islands",
+    "val":"Madeira"
+},{
+    "id":7,
+    "text":"Portugal - Azores",
+    "val":"Azores"
+},{
+    "id":8,
+    "text":"South Georgia & the South Sandwich Islands",
+    "val":"South_Georgia"
+},{
+    "id":9,
+    "text":"Spain - Canary Islands",
+    "val":"Canary"
+},{
+    "id":10,
+    "text":"St Helena",
+    "val":"St_Helena"
+}]

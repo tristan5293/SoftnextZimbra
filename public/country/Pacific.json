@@ -1,0 +1,158 @@
+[{
+    "id":1,
+    "text":"Chile - Easter Island",
+    "val":"Easter",
+    "selected":true
+},{
+    "id":2,
+    "text":"Cook Islands",
+    "val":"Rarotonga"
+},{
+    "id":3,
+    "text":"Ecuador - Galapagos Islands",
+    "val":"Galapagos"
+},{
+    "id":4,
+    "text":"Fiji",
+    "val":"Fiji"
+},{
+    "id":5,
+    "text":"French Polynesia - Society Islands",
+    "val":"Tahiti"
+},{
+    "id":6,
+    "text":"French Polynesia - Marquesas Islands",
+    "val":"Marquesas"
+},{
+    "id":7,
+    "text":"French Polynesia - Gambier Islands",
+    "val":"Gambier"
+},{
+    "id":8,
+    "text":"Guam",
+    "val":"Guam"
+},{
+    "id":9,
+    "text":"Kiribati - Gilbert Islands",
+    "val":"Tarawa"
+},{
+    "id":10,
+    "text":"Kiribati - Phoenix Islands",
+    "val":"Enderbury"
+},{
+    "id":11,
+    "text":"Kiribati - Line Islands",
+    "val":"Kiritimati"
+},{
+    "id":12,
+    "text":"Marshall Islands - most locations",
+    "val":"Majuro"
+},{
+    "id":13,
+    "text":"Marshall Islands - Kwajalein",
+    "val":"Kwajalein"
+},{
+    "id":14,
+    "text":"Micronesia - Chuuk (Truk) and Yap",
+    "val":"Chuuk"
+},{
+    "id":15,
+    "text":"Micronesia - Pohnpei (Ponape)",
+    "val":"Pohnpei"
+},{
+    "id":16,
+    "text":"Micronesia - Kosrae",
+    "val":"Kosrae"
+},{
+    "id":17,
+    "text":"Nauru",
+    "val":"Nauru"
+},{
+    "id":18,
+    "text":"New Caledonia",
+    "val":"Noumea"
+},{
+    "id":19,
+    "text":"New Zealand - most locations",
+    "val":"Auckland"
+},{
+    "id":20,
+    "text":"New Zealand - Chatham Islands",
+    "val":"Chatham"
+},{
+    "id":21,
+    "text":"Niue",
+    "val":"Niue"
+},{
+    "id":22,
+    "text":"Norfolk Island",
+    "val":"Norfolk"
+},{
+    "id":23,
+    "text":"Northern Mariana Islands",
+    "val":"Saipan"
+},{
+    "id":24,
+    "text":"Palau",
+    "val":"Palau"
+},{
+    "id":25,
+    "text":"Papua New Guinea - most locations",
+    "val":"Port_Moresby"
+},{
+    "id":26,
+    "text":"Papua New Guinea - Bougainville",
+    "val":"Bougainville"
+},{
+    "id":27,
+    "text":"Pitcairn",
+    "val":"Pitcairn"
+},{
+    "id":28,
+    "text":"Samoa (American)",
+    "val":"Pago_Pago"
+},{
+    "id":29,
+    "text":"Samoa (western)",
+    "val":"Apia"
+},{
+    "id":30,
+    "text":"Solomon Islands",
+    "val":"Guadalcanal"
+},{
+    "id":31,
+    "text":"Tokelau",
+    "val":"Fakaofo"
+},{
+    "id":32,
+    "text":"Tonga",
+    "val":"Tongatapu"
+},{
+    "id":33,
+    "text":"Tuvalu",
+    "val":"Funafuti"
+},{
+    "id":34,
+    "text":"United States - Hawaii",
+    "val":"Honolulu"
+},{
+    "id":35,
+    "text":"US minor outlying islands - Johnston Atoll",
+    "val":"Johnston"
+},{
+    "id":36,
+    "text":"US minor outlying islands - Midway Islands",
+    "val":"Midway"
+},{
+    "id":37,
+    "text":"US minor outlying islands - Wake Island",
+    "val":"Wake"
+},{
+    "id":38,
+    "text":"Vanuatu",
+    "val":"Efate"
+},{
+    "id":39,
+    "text":"Wallis & Futuna",
+    "val":"Wallis"
+}]

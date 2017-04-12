@@ -1,0 +1,42 @@
+[{
+    "id":1,
+    "text":"Africa",
+    "val":"Africa",
+    "selected":true
+},{
+    "id":2,
+    "text":"Americas",
+    "val":"Americas"
+},{
+    "id":3,
+    "text":"Antarctica",
+    "val":"Antarctica"
+},{
+    "id":4,
+    "text":"Arctic",
+    "val":"Arctic"
+},{
+    "id":5,
+    "text":"Asia",
+    "val":"Asia"
+},{
+    "id":6,
+    "text":"Atlantic",
+    "val":"Atlantic"
+},{
+    "id":7,
+    "text":"Australia",
+    "val":"Australia"
+},{
+    "id":8,
+    "text":"Europe",
+    "val":"Europe"
+},{
+    "id":9,
+    "text":"Indian",
+    "val":"Indian"
+},{
+    "id":10,
+    "text":"Pacific",
+    "val":"Pacific"
+}]
