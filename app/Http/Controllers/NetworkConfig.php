@@ -110,7 +110,7 @@ class NetworkConfig extends Controller
             $contents = Storage::get($file_path);
 
             //restart network
-            $process = new Process('sudo service network-manager restart');
+            $process = new Process('sudo /etc/init.d/networking restart');
             $process->run();
             // executes after the command finishes
             if (!$process->isSuccessful()) {
