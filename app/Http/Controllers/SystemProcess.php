@@ -10,7 +10,7 @@ use Symfony\Component\Process\Exception\ProcessFailedException;
 class SystemProcess extends Controller
 {
     public function ProcessShutdown(Request $request){
-        $process = new Process('sudo shutdown -h now');
+        $process = new Process('sudo poweroff');
         $process->run();
         // executes after the command finishes
         if (!$process->isSuccessful()) {
@@ -20,7 +20,7 @@ class SystemProcess extends Controller
     }
 
     public function ProcessReboot(Request $request){
-        $process = new Process('sudo shutdown -r 0');
+        $process = new Process('sudo reboot');
         $process->run();
         // executes after the command finishes
         if (!$process->isSuccessful()) {
