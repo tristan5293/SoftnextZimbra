@@ -31,7 +31,7 @@
                               */
                             }
                         });
-                        $.messager.alert('', '系統關閉中', '', function(){
+                        $.messager.alert('', '系統關閉中，請手動關閉目前頁面', '', function(){
                             window.open('', '_self', '');
                             window.close();
                         });
@@ -53,7 +53,7 @@
                               */
                             }
                         });
-                        $.messager.alert('', '系統重啟中，請稍後使用', '', function(){
+                        $.messager.alert('', '系統重啟中，請手動關閉目前頁面', '', function(){
                             window.open('', '_self', '');
                             window.close();
                         });
