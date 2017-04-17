@@ -35,10 +35,16 @@
                         return $(this).form('validate');
                     },
                     success:function(data){
+                      /*
                         $.messager.alert('', data, '', function(){
                             location.reload();
                         });
+                      */
                     }
+                });
+                $.messager.alert('', '系統重啟中，請稍後使用', '', function(){
+                    window.open('', '_self', '');
+                    window.close();
                 });
             }
         </script>
@@ -98,6 +104,11 @@
                         <div id="warning" name="warning" style='padding:5px;color:#ff0000;'>
                             {{ $msg }}
                         </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div style='color:#ff0000;'>注意 : 更動網路設定系統將會重新啟動</div>
                     </td>
                 </tr>
                 <tr>
