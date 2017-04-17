@@ -110,7 +110,8 @@ class NetworkConfig extends Controller
             $contents = Storage::get($file_path);
 
             //restart network
-            $process = new Process('sudo /etc/init.d/networking restart');
+            //$process = new Process('sudo ip addr flush ens33 && systemctl restart networking.service');
+            $process = new Process('sudo reboot');
             $process->run();
             // executes after the command finishes
             if (!$process->isSuccessful()) {

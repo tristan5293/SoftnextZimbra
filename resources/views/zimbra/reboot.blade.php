@@ -25,7 +25,8 @@
                             url:'/shutdown',
                             success:function(data){
                                 $.messager.alert('', data, '', function(){
-                                    $('#btnSubmit').linkbutton('enable');
+                                    //$('#btnSubmit').linkbutton('enable');
+                                    parent.location.href='/logout';
                                 });
                             }
                         });
@@ -41,7 +42,8 @@
                             url:'/reboot',
                             success:function(data){
                                 $.messager.alert('', data, '', function(){
-                                    $('#btnSubmit3').linkbutton('enable');
+                                    //$('#btnSubmit3').linkbutton('enable');
+                                    parent.location.href='/logout';
                                 });
                             }
                         });

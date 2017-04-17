@@ -84,12 +84,6 @@
                     目前系統時間 : <label id="lbltxtdate" style="color:#CC66FF"/>
                 </td>
             </tr>
-            <tr>
-                <td colspan="2">
-                   執行相關指令 :</br>
-                   $ sudo ntpdate tw.pool.ntp.org
-                </td>
-            </tr>
         </table>
         </form>
     </body>

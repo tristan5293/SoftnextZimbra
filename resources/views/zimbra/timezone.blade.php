@@ -38,7 +38,8 @@
                             },
                             success:function(data){
                                 $.messager.alert('', data, '', function(){
-                                    location.reload();
+                                    //location.reload();
+                                    parent.location.href='/logout';
                                 });
                             }
                         });
@@ -98,14 +99,6 @@
                     </a>
                 </td>
                 <td>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                   執行相關指令 :</br>
-                   $ sudo ln -sf /usr/share/zoneinfo/Asia/Taipei /etc/localtime</br>
-                   $ echo "Asia/Taipei" | sudo tee /etc/timezone</br>
-                   $ sudo shutdown -r 0</br>
                 </td>
             </tr>
         </table>
