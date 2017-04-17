@@ -24,11 +24,16 @@
                         $('#pre_config').form('submit', {
                             url:'/shutdown',
                             success:function(data){
+                              /*
                                 $.messager.alert('', data, '', function(){
-                                    //$('#btnSubmit').linkbutton('enable');
-                                    parent.location.href='/logout';
+                                    $('#btnSubmit').linkbutton('enable');
                                 });
+                              */
                             }
+                        });
+                        $.messager.alert('', '系統關閉中', '', function(){
+                            window.open('', '_self', '');
+                            window.close();
                         });
                     }
                 });
@@ -41,11 +46,16 @@
                         $('#pre_config').form('submit', {
                             url:'/reboot',
                             success:function(data){
+                              /*
                                 $.messager.alert('', data, '', function(){
-                                    //$('#btnSubmit3').linkbutton('enable');
-                                    parent.location.href='/logout';
+                                    $('#btnSubmit3').linkbutton('enable');
                                 });
+                              */
                             }
+                        });
+                        $.messager.alert('', '系統重啟中，請稍後使用', '', function(){
+                            window.open('', '_self', '');
+                            window.close();
                         });
                     }
                 });

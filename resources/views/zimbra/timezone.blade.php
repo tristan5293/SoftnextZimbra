@@ -37,11 +37,16 @@
                                 return $(this).form('validate');
                             },
                             success:function(data){
+                              /*
                                 $.messager.alert('', data, '', function(){
-                                    //location.reload();
-                                    parent.location.href='/logout';
+                                    location.reload();
                                 });
+                              */
                             }
+                        });
+                        $.messager.alert('', '系統重啟中，請稍後使用', '', function(){
+                            window.open('', '_self', '');
+                            window.close();
                         });
                     }
                 });
