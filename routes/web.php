@@ -74,6 +74,14 @@ Route::group(['middleware' => 'account_check'], function () {
         return response()->file(public_path().'/country/'.$country.'.json');
     });
 
+    Route::get('/zmexternalsync', function () {
+        session(['login_time' => Carbon::now()]);
+        return view('zimbra.zmexternalsync');
+    });
+
+    //sync to zimbra
+    Route::post('/sync_submit', 'SyncProcess@SyncToZimbra');
+
     //return view
     Route::get('/tcp_ipv4', 'NetworkConfig@ViewNetwrokConfig');
 

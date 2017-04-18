@@ -45,6 +45,12 @@
             <div id="zimbra" data-options="region:'west',split:true" title="zimbra"
                   style="width:330px;padding:0px;overflow:hidden;height:100%">
                 <div id="gttPanels" class="easyui-accordion" fit="true" border="false" style="height:100%;">
+                    <div title="帳號同步" style="padding:8px;overflow:auto;height:100%">
+                        <div style="padding:10px;cursor:pointer;"
+                             onClick="addTab('zmexternalsync', '帳號同步', '/zmexternalsync');">
+                            <li style="font-size:16px;">帳號同步</li>
+                        </div>
+                    </div>
                     <div title="連線設定" style="padding:8px;overflow:auto;height:100%">
                         <div style="padding:10px;cursor:pointer;"
                              onClick="addTab('tcp_ipv4', 'TCP/IPv4', '/tcp_ipv4');">
