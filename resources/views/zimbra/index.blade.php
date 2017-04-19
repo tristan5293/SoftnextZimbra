@@ -83,10 +83,6 @@
                     </div>
                     <div title="系統設定" style="padding:8px;overflow:auto;height:100%">
                         <div style="padding:10px;cursor:pointer;"
-                             onClick="addTab('check_log', '查看Log', '/check_log');">
-                            <li style="font-size:16px;">查看Log</li>
-                        </div>
-                        <div style="padding:10px;cursor:pointer;"
                              onClick="addTab('reboot', '系統設定', '/reboot');">
                             <li style="font-size:16px;">系統重啟</li>
                         </div>

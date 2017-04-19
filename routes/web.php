@@ -39,14 +39,14 @@ Route::group(['middleware' => 'account_check'], function () {
         return view('zimbra.reboot');
     });
 
-    Route::get('/check_log', function () {
-        session(['login_time' => Carbon::now()]);
-        return view('zimbra.check_log');
-    });
-
     Route::get('/zimbra_log', function () {
         session(['login_time' => Carbon::now()]);
         return view('zimbra.zimbra_log');
+    });
+
+    Route::get('/audit_log', function () {
+        session(['login_time' => Carbon::now()]);
+        return view('zimbra.audit_log');
     });
 
     Route::get('/timezone', function () {
@@ -105,11 +105,11 @@ Route::group(['middleware' => 'account_check'], function () {
     //time server list (新增/刪除)
     Route::post('/time_server_list', 'DateTimeProcess@TimeServerList');
 
-    //Check log file & keyword search
-    Route::post('/checkLog', 'SystemProcess@CheckLog');
-
     //Zimbra log file & keyword search
     Route::post('/checkZimbraLog', 'LogProcess@ZimbraLog');
+
+    //Audit log file & keyword search
+    Route::post('/checkAuditLog', 'LogProcess@AuditLog');
 
     //Ubuntu reboot & shutdown
     Route::post('/shutdown', 'SystemProcess@ProcessShutdown');

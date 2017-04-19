@@ -26,4 +26,22 @@ class LogProcess extends Controller
           }
         }
     }
+
+    public function AuditLog(Request $request){
+        $keyword = $request->input('keyword');
+        $keyword_arr = explode(" ", $keyword);
+        $grep_str = '';
+        foreach ($keyword_arr as &$value) {
+            $grep_str .= ' | grep "'.$value.'"';
+        }
+        $process = new Process('sudo cat /opt/zimbra/log/audit.log'.$grep_str);
+        $process->start();
+        foreach ($process as $type => $data) {
+          if ($process::OUT === $type) {
+              return $data;
+          } else { // $process::ERR === $type
+              return $data;
+          }
+        }
+    }
 }
