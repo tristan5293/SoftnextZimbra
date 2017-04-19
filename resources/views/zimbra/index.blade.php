@@ -51,6 +51,16 @@
                             <li style="font-size:16px;">帳號同步</li>
                         </div>
                     </div>
+                    <div title="Log查詢" style="padding:8px;overflow:auto;height:100%">
+                        <div style="padding:10px;cursor:pointer;"
+                             onClick="addTab('zimbra_log', 'zimbra.log', '/zimbra_log');">
+                            <li style="font-size:16px;">zimbra.log</li>
+                        </div>
+                        <div style="padding:10px;cursor:pointer;"
+                             onClick="addTab('audit_log', 'audit.log', '/audit_log');">
+                            <li style="font-size:16px;">audit.log</li>
+                        </div>
+                    </div>
                     <div title="連線設定" style="padding:8px;overflow:auto;height:100%">
                         <div style="padding:10px;cursor:pointer;"
                              onClick="addTab('tcp_ipv4', 'TCP/IPv4', '/tcp_ipv4');">

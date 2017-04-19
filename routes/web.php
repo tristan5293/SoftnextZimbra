@@ -44,6 +44,11 @@ Route::group(['middleware' => 'account_check'], function () {
         return view('zimbra.check_log');
     });
 
+    Route::get('/zimbra_log', function () {
+        session(['login_time' => Carbon::now()]);
+        return view('zimbra.zimbra_log');
+    });
+
     Route::get('/timezone', function () {
         session(['login_time' => Carbon::now()]);
         $process = new Process('sudo cat /etc/timezone');
@@ -102,6 +107,9 @@ Route::group(['middleware' => 'account_check'], function () {
 
     //Check log file & keyword search
     Route::post('/checkLog', 'SystemProcess@CheckLog');
+
+    //Zimbra log file & keyword search
+    Route::post('/checkZimbraLog', 'LogProcess@ZimbraLog');
 
     //Ubuntu reboot & shutdown
     Route::post('/shutdown', 'SystemProcess@ProcessShutdown');
