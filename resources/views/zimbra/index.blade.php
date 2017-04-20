@@ -61,6 +61,12 @@
                             <li style="font-size:16px;">audit.log</li>
                         </div>
                     </div>
+                    <div title="掛載檢查" style="padding:8px;overflow:auto;height:100%">
+                        <div style="padding:10px;cursor:pointer;"
+                             onClick="addTab('mount_check', 'Zimbra掛載檢查', '/mount_check');">
+                            <li style="font-size:16px;">Zimbra掛載檢查</li>
+                        </div>
+                    </div>
                     <div title="連線設定" style="padding:8px;overflow:auto;height:100%">
                         <div style="padding:10px;cursor:pointer;"
                              onClick="addTab('tcp_ipv4', 'TCP/IPv4', '/tcp_ipv4');">

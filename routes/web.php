@@ -49,6 +49,11 @@ Route::group(['middleware' => 'account_check'], function () {
         return view('zimbra.audit_log');
     });
 
+    Route::get('/mount_check', function () {
+        session(['login_time' => Carbon::now()]);
+        return view('zimbra.mount_check');
+    });
+
     Route::get('/timezone', function () {
         session(['login_time' => Carbon::now()]);
         $process = new Process('sudo cat /etc/timezone');
@@ -110,6 +115,9 @@ Route::group(['middleware' => 'account_check'], function () {
 
     //Audit log file & keyword search
     Route::post('/checkAuditLog', 'LogProcess@AuditLog');
+
+    //Zimbra Mount Check
+    Route::post('/zimbraMountCheck', 'MountCheckProcess@ZimbraMount');
 
     //Ubuntu reboot & shutdown
     Route::post('/shutdown', 'SystemProcess@ProcessShutdown');
