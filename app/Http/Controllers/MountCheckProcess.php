@@ -10,7 +10,7 @@ use Symfony\Component\Process\Exception\ProcessFailedException;
 class MountCheckProcess extends Controller
 {
     public function ZimbraMount(Request $request){
-        $process = new Process('sudo su - zimbra -c "df -h | grep zimbra"'.$grep_str);
+        $process = new Process('sudo su - zimbra -c "df -h | grep zimbra"');
         $process->start();
         foreach ($process as $type => $data) {
             if ($process::OUT === $type) {
