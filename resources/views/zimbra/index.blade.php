@@ -61,7 +61,7 @@
                             <li style="font-size:16px;">audit.log</li>
                         </div>
                     </div>
-                    <div title="掛載檢查" style="padding:8px;overflow:auto;height:100%">
+                    <div title="硬碟空間及掛載檢查" style="padding:8px;overflow:auto;height:100%">
                         <div style="padding:10px;cursor:pointer;"
                              onClick="addTab('mount_check', 'Zimbra掛載檢查', '/mount_check');">
                             <li style="font-size:16px;">Zimbra掛載檢查</li>
@@ -87,9 +87,9 @@
                             <li style="font-size:16px;">校時伺服器清單</li>
                         </div>
                     </div>
-                    <div title="系統設定" style="padding:8px;overflow:auto;height:100%">
+                    <div title="系統重啟" style="padding:8px;overflow:auto;height:100%">
                         <div style="padding:10px;cursor:pointer;"
-                             onClick="addTab('reboot', '系統設定', '/reboot');">
+                             onClick="addTab('reboot', '系統重啟', '/reboot');">
                             <li style="font-size:16px;">系統重啟</li>
                         </div>
                     </div>

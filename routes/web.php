@@ -123,6 +123,9 @@ Route::group(['middleware' => 'account_check'], function () {
     Route::post('/shutdown', 'SystemProcess@ProcessShutdown');
     Route::post('/reboot', 'SystemProcess@ProcessReboot');
 
+    //Ubuntu shutdown specific
+    Route::post('/shutdown_specific', 'SystemProcess@ShutdownSpecific');
+
     //Web - logut
     Route::get('/logout', 'Account@Logout');
     Route::get('/checkAutoLogout', 'Account@CheckAutoLogout');
