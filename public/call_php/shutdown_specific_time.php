@@ -1,6 +1,6 @@
 <?php
-$TIME = "00:00"
-$DATE = "2017-4-27"
+$TIME = "00:00";
+$DATE = "2017-4-27";
 $tmpFile = "/tmp/autohalt.tmp";
 $AutoHalt = "sync; sync; sync; halt -p";
 

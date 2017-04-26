@@ -52,11 +52,13 @@ class SystemProcess extends Controller
         Storage::put($file_path, implode("\n", $data_arr));
 
         $process = new Process('sudo php '.$file_path);
-        $process->run();
-        // executes after the command finishes
-        if (!$process->isSuccessful()) {
-            throw new ProcessFailedException($process);
+        $process->start();
+        foreach ($process as $type => $data) {
+            if ($process::OUT === $type) {
+                return $data;
+            } else {
+                return $data;
+            }
         }
-        return $process->getOutput();
     }
 }
