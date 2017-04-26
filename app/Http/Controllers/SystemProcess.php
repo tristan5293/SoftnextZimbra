@@ -41,11 +41,11 @@ class SystemProcess extends Controller
         foreach ($data_arr as &$value) {
             $index++;
             if(str_contains($value, '$TIME = ')){
-                $data_arr[$index] = '$TIME = "'.$shutdown_time.'"';
+                $data_arr[$index] = '$TIME = "'.$shutdown_time.'";';
                 continue;
             }
             if(str_contains($value, '$DATE = ')){
-                $data_arr[$index] = '$DATE = "'.$shutdown_date.'"';
+                $data_arr[$index] = '$DATE = "'.$shutdown_date.'";';
                 continue;
             }
         }
