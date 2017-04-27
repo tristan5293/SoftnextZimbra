@@ -31,32 +31,24 @@ class SystemProcess extends Controller
     }
 
     public function ShutdownSpecific(Request $request){
-        $shutdown_date = $request->input('shutdown_date');
-        $shutdown_time = $request->input('shutdown_time');
-
-        $file_path = public_path().'/call_php/shutdown_specific_time.php';
-        $contents = Storage::get($file_path);
-        $data_arr = explode("\n", $contents);
-        $index = -1;
-        foreach ($data_arr as &$value) {
-            $index++;
-            if(str_contains($value, '$TIME = ')){
-                $data_arr[$index] = '$TIME = "'.$shutdown_time.'";';
-                continue;
-            }
-            if(str_contains($value, '$DATE = ')){
-                $data_arr[$index] = '$DATE = "'.$shutdown_date.'";';
-                continue;
-            }
+        $TIME = $request->input('shutdown_time');
+        $DATE = $request->input('shutdown_date');
+        $tmpFile = "/tmp/autohalt.tmp";
+        $AutoHalt = "sync; sync; sync; halt -p";
+        if(file_exists($tmpFile)){
+            unlink($tmpFile);
         }
-        Storage::put($file_path, implode("\n", $data_arr));
-
-        $process = new Process('sudo php '.$file_path);
+        $fs = fopen($tmpFile, "w");
+        fwrite($fs, $AutoHalt);
+        fclose($fs);
+        $process = new Process("sudo at $TIME $DATE < $tmpFile");
         $process->start();
         foreach ($process as $type => $data) {
             if ($process::OUT === $type) {
+                unlink($tmpFile);
                 return $data;
             } else {
+                unlink($tmpFile);
                 return $data;
             }
         }
