@@ -41,16 +41,17 @@ class SystemProcess extends Controller
         $fs = fopen($tmpFile, "w");
         fwrite($fs, $AutoHalt);
         fclose($fs);
+        $result_str = '';
         $process = new Process("sudo at $TIME $DATE < $tmpFile");
         $process->start();
         foreach ($process as $type => $data) {
             if ($process::OUT === $type) {
-                unlink($tmpFile);
-                return $data;
+                $result_str .= $data;
             } else {
-                unlink($tmpFile);
-                return $data;
+                $result_str .= $data;
             }
         }
+        unlink($tmpFile);
+        return $result_str;
     }
 }
