@@ -59,7 +59,7 @@ class SystemProcess extends Controller
             }
         }
         unlink($tmpFile);
-        ShutdownSpecific::create([
+        ShutdownSpecific::updateOrCreate([
             'date' => $DATE,
             'time' => $TIME,
             'jobnumber' => $NUM,
