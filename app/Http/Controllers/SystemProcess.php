@@ -51,19 +51,34 @@ class SystemProcess extends Controller
             if ($process::OUT === $type) {
                 $result_str .= $data;
             } else {
-                $result_str .= $data;
                 if(str_contains($data, 'job')){
                     $tmp_arr = explode(" ", $data);
                     $NUM = trim($tmp_arr[1]);
+                    $result_str .= $data;
                 }
             }
         }
         unlink($tmpFile);
-        ShutdownSpecific::updateOrCreate([
+
+        $shut_spec = ShutdownSpecific::find(1);
+        if(!empty($shut_spec)){
+            $tmp = '';
+            $process2 = new Process('sudo atrm '.$shut_spec->jobnumber);
+            $process2->start();
+            foreach ($process2 as $type => $data) {
+                if ($process2::OUT === $type) {
+                    $tmp .= $data;
+                } else {
+                    $tmp .= $data;
+                }
+            }
+        }
+        ShutdownSpecific::truncate();
+        ShutdownSpecific::create([
             'date' => $DATE,
             'time' => $TIME,
             'jobnumber' => $NUM,
         ]);
-        return $result_str;
+        return str_replace("\n", "<br/>", $result_str);
     }
 }
