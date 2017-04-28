@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Storage;
 use Symfony\Component\Process\Process;
 use Symfony\Component\Process\Exception\ProcessFailedException;
 
+use App\ShutdownSpecific;
+
 class SystemProcess extends Controller
 {
     public function ProcessShutdown(Request $request){
@@ -42,6 +44,7 @@ class SystemProcess extends Controller
         fwrite($fs, $AutoHalt);
         fclose($fs);
         $result_str = '';
+        $NUM = '';
         $process = new Process("sudo at $TIME $DATE < $tmpFile");
         $process->start();
         foreach ($process as $type => $data) {
@@ -49,9 +52,18 @@ class SystemProcess extends Controller
                 $result_str .= $data;
             } else {
                 $result_str .= $data;
+                if(str_contains($data, 'job')){
+                    $tmp_arr = explode(" ", $data);
+                    $NUM = trim($tmp_arr[1]);
+                }
             }
         }
         unlink($tmpFile);
+        ShutdownSpecific::create([
+            'date' => $DATE,
+            'time' => $TIME,
+            'jobnumber' => $NUM,
+        ]);
         return $result_str;
     }
 }
