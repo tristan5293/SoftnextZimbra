@@ -81,4 +81,22 @@ class SystemProcess extends Controller
         ]);
         return str_replace("\n", "<br/>", $result_str);
     }
+
+    public function CancelShutdownSpecific(Request $request){
+        $shut_spec = ShutdownSpecific::find(1);
+        if(!empty($shut_spec)){
+            $tmp = '';
+            $process = new Process('sudo atrm '.$shut_spec->jobnumber);
+            $process->start();
+            foreach ($process as $type => $data) {
+                if ($process::OUT === $type) {
+                    $tmp .= $data;
+                } else {
+                    $tmp .= $data;
+                }
+            }
+        }
+        ShutdownSpecific::truncate();
+        return '';
+    }
 }

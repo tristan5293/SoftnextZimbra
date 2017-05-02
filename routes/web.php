@@ -1,6 +1,7 @@
 <?php
 use Carbon\Carbon;
 use App\TimeServerList;
+use App\ShutdownSpecific;
 
 use Symfony\Component\Process\Process;
 use Symfony\Component\Process\Exception\ProcessFailedException;
@@ -36,7 +37,8 @@ Route::group(['middleware' => 'account_check'], function () {
 
     Route::get('/reboot', function () {
         session(['login_time' => Carbon::now()]);
-        return view('zimbra.reboot');
+        $shutdown_specific = ShutdownSpecific::find(1);
+        return view('zimbra.reboot', ['shutdown_specific' => $shutdown_specific]);
     });
 
     Route::get('/zimbra_log', function () {
@@ -125,6 +127,9 @@ Route::group(['middleware' => 'account_check'], function () {
 
     //Ubuntu shutdown specific
     Route::post('/shutdown_specific', 'SystemProcess@ShutdownSpecific');
+
+    //Ubuntu cancel shutdown specific
+    Route::post('/cancel_shutdown_specific', 'SystemProcess@CancelShutdownSpecific');
 
     //Web - logut
     Route::get('/logout', 'Account@Logout');

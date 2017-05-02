@@ -96,6 +96,20 @@
                     }
                 });
             }
+
+            function cancelShutdownSpecific(){
+                $.messager.confirm('', '確定取消?', function(r){
+                    if (r){
+                        $('#btnCancelSP').linkbutton('disable');
+                        $('#pre_config').form('submit', {
+                            url:'/cancel_shutdown_specific',
+                            success:function(data){
+                                location.reload();
+                            }
+                        });
+                    }
+                });
+            }
         </script>
     </head>
     <body>
@@ -160,6 +174,13 @@
                         下次關機時間
                     </td>
                     <td>
+                        {{ $shutdown_specific->date or '未設定' }}&nbsp;{{ $shutdown_specific->time or '' }}
+                        @if ($shutdown_specific['date'] != '')
+                            <a id="btnCancelSP" name="btnCancelSP" href="#" onclick="cancelShutdownSpecific()"
+                               class="easyui-linkbutton" style="width:75px;height:32px">
+                                取消
+                            </a>
+                        @endif
                     </td>
                 </tr>
             </table>
