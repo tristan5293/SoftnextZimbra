@@ -90,7 +90,9 @@
                         $('#pre_config').form('submit', {
                             url:'/shutdown_specific',
                             success:function(data){
-                                $.messager.alert('', data);
+                                $.messager.alert('', data, '', function(){
+                                    location.reload();
+                                });
                             }
                         });
                     }
