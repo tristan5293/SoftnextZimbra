@@ -54,11 +54,15 @@
                     <div title="Log查詢" style="padding:8px;overflow:auto;height:100%">
                         <div style="padding:10px;cursor:pointer;"
                              onClick="addTab('zimbra_log', 'zimbra.log', '/zimbra_log');">
-                            <li style="font-size:16px;">zimbra.log</li>
+                            <li style="font-size:16px;">zimbra.log&nbsp;(外部信件記錄)</li>
+                        </div>
+                        <div style="padding:10px;cursor:pointer;"
+                             onClick="addTab('mailbox_log', 'mailbox.log', '/mailbox_log');">
+                            <li style="font-size:16px;">mailbox.log&nbsp;(內部信件記錄)</li>
                         </div>
                         <div style="padding:10px;cursor:pointer;"
                              onClick="addTab('audit_log', 'audit.log', '/audit_log');">
-                            <li style="font-size:16px;">audit.log</li>
+                            <li style="font-size:16px;">audit.log&nbsp;(POP3 log)</li>
                         </div>
                     </div>
                     <div title="硬碟空間及掛載檢查" style="padding:8px;overflow:auto;height:100%">

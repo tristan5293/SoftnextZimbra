@@ -46,6 +46,11 @@ Route::group(['middleware' => 'account_check'], function () {
         return view('zimbra.zimbra_log');
     });
 
+    Route::get('/mailbox_log', function () {
+        session(['login_time' => Carbon::now()]);
+        return view('zimbra.mailbox_log');
+    });
+
     Route::get('/audit_log', function () {
         session(['login_time' => Carbon::now()]);
         return view('zimbra.audit_log');
@@ -114,6 +119,9 @@ Route::group(['middleware' => 'account_check'], function () {
 
     //Zimbra log file & keyword search
     Route::post('/checkZimbraLog', 'LogProcess@ZimbraLog');
+
+    //Mail log file & keyword search
+    Route::post('/checkMailLog', 'LogProcess@MailLog');
 
     //Audit log file & keyword search
     Route::post('/checkAuditLog', 'LogProcess@AuditLog');
