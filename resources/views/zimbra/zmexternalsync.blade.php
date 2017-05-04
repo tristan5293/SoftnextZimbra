@@ -13,6 +13,9 @@
         </style>
         <script type="text/javascript">
     	      $(function(){
+                $('#sync_result').textbox({
+                    height: $(window).height() - 50,
+                });
 		        });
 
             function submitSync(){
@@ -28,22 +31,20 @@
         </script>
     </head>
     <body>
-		    <div id="inner_layout" class="easyui-layout" style="width:100%;height:565px;">
-            <form class="easyui-form" id="sync_form" name="sync_form" method="post">
-            {{ csrf_field() }}
-            <table>
-                <tr>
-                    <td>
-                        <a href="javascript:void(0)" class="easyui-linkbutton" id="btnSubmitSync"
-                           style="width:75px;height:32px" onclick="submitSync()">
-                           帳號同步
-                        </a>
-                    </td>
-                </tr>
-            </table>
-            </form>
-            <input class="easyui-textbox" id="sync_result" name="sync_result" style="width:100%;height:500px"
-                   data-options="multiline:true,readonly:true"/>
-		    </div>
+        <form class="easyui-form" id="sync_form" name="sync_form" method="post">
+        {{ csrf_field() }}
+        <table>
+            <tr>
+                <td>
+                    <a href="javascript:void(0)" class="easyui-linkbutton" id="btnSubmitSync"
+                       style="width:75px;height:32px" onclick="submitSync()">
+                       帳號同步
+                    </a>
+                </td>
+            </tr>
+        </table>
+        </form>
+        <input class="easyui-textbox" id="sync_result" name="sync_result" style="width:100%;"
+               data-options="multiline:true,readonly:true"/>
     </body>
 </html>
