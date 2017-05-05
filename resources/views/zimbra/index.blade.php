@@ -64,6 +64,10 @@
                              onClick="addTab('audit_log', 'audit.log', '/audit_log');">
                             <li style="font-size:16px;">audit.log&nbsp;(POP3 log)</li>
                         </div>
+                        <div style="padding:10px;cursor:pointer;"
+                             onClick="addTab('access_log', 'access.log', '/access_log');">
+                            <li style="font-size:16px;">access.log&nbsp;(ActiveSync Log)</li>
+                        </div>
                     </div>
                     <div title="硬碟空間及掛載檢查" style="padding:8px;overflow:auto;height:100%">
                         <div style="padding:10px;cursor:pointer;"
