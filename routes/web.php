@@ -35,12 +35,6 @@ Route::group(['middleware' => 'account_check'], function () {
         return view('zimbra.index');
     });
 
-    Route::get('/reboot', function () {
-        session(['login_time' => Carbon::now()]);
-        $shutdown_specific = ShutdownSpecific::find(1);
-        return view('zimbra.reboot', ['shutdown_specific' => $shutdown_specific]);
-    });
-
     Route::get('/zimbra_log', function () {
         session(['login_time' => Carbon::now()]);
         return view('zimbra.zimbra_log');
@@ -106,6 +100,9 @@ Route::group(['middleware' => 'account_check'], function () {
 
     //return view
     Route::get('/tcp_ipv4', 'NetworkConfig@ViewNetwrokConfig');
+
+    //return view
+    Route::get('/reboot', 'SystemProcess@ViewReboot');
 
     //network config - update
     Route::post('/update_network_config', 'NetworkConfig@UpdateNetwrokConfig');

@@ -9,6 +9,7 @@ use Symfony\Component\Process\Process;
 use Symfony\Component\Process\Exception\ProcessFailedException;
 
 use App\ShutdownSpecific;
+use Carbon\Carbon;
 
 class SystemProcess extends Controller
 {
@@ -98,5 +99,27 @@ class SystemProcess extends Controller
         }
         ShutdownSpecific::truncate();
         return '';
+    }
+
+    public function ViewReboot(Request $request){
+        $request->session()->put('login_time', Carbon::now());
+        $shut_spec = ShutdownSpecific::find(1);
+        if(!empty($shut_spec)){
+            $tmp = '';
+            $process = new Process('sudo atq | awk \'{print $1}\'');
+            $process->start();
+            foreach ($process as $type => $data) {
+                if ($process::OUT === $type) {
+                    $tmp .= $data;
+                } else {
+                    $tmp .= $data;
+                }
+            }
+
+            if(!str_contains($tmp, $shut_spec->jobnumber)){
+                ShutdownSpecific::truncate();
+            }
+        }
+        return view('zimbra.reboot', ['shutdown_specific' => $shutdown_specific]);
     }
 }
