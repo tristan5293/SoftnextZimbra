@@ -120,6 +120,6 @@ class SystemProcess extends Controller
                 ShutdownSpecific::truncate();
             }
         }
-        return view('zimbra.reboot', ['shutdown_specific' => $shutdown_specific]);
+        return view('zimbra.reboot', ['shutdown_specific' => $shut_spec]);
     }
 }
