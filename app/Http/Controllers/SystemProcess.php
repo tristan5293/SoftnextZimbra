@@ -118,6 +118,7 @@ class SystemProcess extends Controller
 
             if(!str_contains($tmp, $shut_spec->jobnumber)){
                 ShutdownSpecific::truncate();
+                $shut_spec = ShutdownSpecific::find(1);//清掉後, 重新抓取變數值
             }
         }
         return view('zimbra.reboot', ['shutdown_specific' => $shut_spec]);
