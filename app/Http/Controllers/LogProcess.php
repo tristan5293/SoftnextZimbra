@@ -17,22 +17,25 @@ class LogProcess extends Controller
         $index = 0;
         foreach ($keyword_arr as &$value) {
             if($index == 0){
+                $index++;
                 continue;
             }else{
                 $grep_str .= ' | grep "'.$value.'"';
             }
             $index++;
         }
-        if(count($keyword_arr) >= 1){
+        if($keyword_arr[0] != ''){
+            $tmp = '';
             $process = new Process('sudo zgrep "'.$keyword_arr[0].'" /var/log/zimbra.log* '.$grep_str);
             $process->start();
             foreach ($process as $type => $data) {
                 if ($process::OUT === $type) {
-                    return $data;
+                    $tmp .= $data;
                 } else { // $process::ERR === $type
-                    return $data;
+                    $tmp .= $data;
                 }
             }
+            return $tmp;
         }
     }
 
