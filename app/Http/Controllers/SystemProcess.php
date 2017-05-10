@@ -115,7 +115,6 @@ class SystemProcess extends Controller
                     $tmp .= $data;
                 }
             }
-
             if(!str_contains($tmp, $shut_spec->jobnumber)){
                 ShutdownSpecific::truncate();
                 $shut_spec = ShutdownSpecific::find(1);//清掉後, 重新抓取變數值

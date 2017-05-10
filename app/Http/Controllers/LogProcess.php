@@ -14,17 +14,25 @@ class LogProcess extends Controller
         $keyword = $request->input('keyword');
         $keyword_arr = explode(" ", $keyword);
         $grep_str = '';
+        $index = 0;
         foreach ($keyword_arr as &$value) {
-            $grep_str .= ' | grep "'.$value.'"';
+            if($index == 0){
+                continue;
+            }else{
+                $grep_str .= ' | grep "'.$value.'"';
+            }
+            $index++;
         }
-        $process = new Process('sudo cat /var/log/zimbra.log'.$grep_str);
-        $process->start();
-        foreach ($process as $type => $data) {
-          if ($process::OUT === $type) {
-              return $data;
-          } else { // $process::ERR === $type
-              return $data;
-          }
+        if(count($keyword_arr) >= 1){
+            $process = new Process('sudo zgrep "'.$keyword_arr[0].'" /var/log/zimbra.log* '.$grep_str);
+            $process->start();
+            foreach ($process as $type => $data) {
+                if ($process::OUT === $type) {
+                    return $data;
+                } else { // $process::ERR === $type
+                    return $data;
+                }
+            }
         }
     }
 
