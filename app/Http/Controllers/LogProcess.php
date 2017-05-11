@@ -10,6 +10,10 @@ use Carbon\Carbon;
 
 class LogProcess extends Controller
 {
+  /*
+      規格: 1. 沒有輸入keywork，則查詢結果不吐資料
+           2. 針對全部檔案做搜尋
+  */
     public function ZimbraLog(Request $request){
         $keyword = $request->input('keyword');
         $keyword_arr = explode(" ", $keyword);
@@ -43,17 +47,28 @@ class LogProcess extends Controller
         $keyword = $request->input('keyword');
         $keyword_arr = explode(" ", $keyword);
         $grep_str = '';
+        $index = 0;
         foreach ($keyword_arr as &$value) {
-            $grep_str .= ' | grep "'.$value.'"';
+            if($index == 0){
+                $index++;
+                continue;
+            }else{
+                $grep_str .= ' | grep "'.$value.'"';
+            }
+            $index++;
         }
-        $process = new Process('sudo cat /opt/zimbra/log/mailbox.log'.$grep_str);
-        $process->start();
-        foreach ($process as $type => $data) {
-          if ($process::OUT === $type) {
-              return $data;
-          } else { // $process::ERR === $type
-              return $data;
-          }
+        if($keyword_arr[0] != ''){
+            $tmp = '';
+            $process = new Process('sudo zgrep "'.$keyword_arr[0].'" /opt/zimbra/log/mailbox.log* '.$grep_str);
+            $process->start();
+            foreach ($process as $type => $data) {
+                if ($process::OUT === $type) {
+                    $tmp .= $data;
+                } else { // $process::ERR === $type
+                    $tmp .= $data;
+                }
+            }
+            return $tmp;
         }
     }
 
@@ -61,36 +76,58 @@ class LogProcess extends Controller
         $keyword = $request->input('keyword');
         $keyword_arr = explode(" ", $keyword);
         $grep_str = '';
+        $index = 0;
         foreach ($keyword_arr as &$value) {
-            $grep_str .= ' | grep "'.$value.'"';
+            if($index == 0){
+                $index++;
+                continue;
+            }else{
+                $grep_str .= ' | grep "'.$value.'"';
+            }
+            $index++;
         }
-        $process = new Process('sudo cat /opt/zimbra/log/audit.log'.$grep_str);
-        $process->start();
-        foreach ($process as $type => $data) {
-          if ($process::OUT === $type) {
-              return $data;
-          } else { // $process::ERR === $type
-              return $data;
-          }
+        if($keyword_arr[0] != ''){
+            $tmp = '';
+            $process = new Process('sudo zgrep "'.$keyword_arr[0].'" /opt/zimbra/log/audit.log* '.$grep_str);
+            $process->start();
+            foreach ($process as $type => $data) {
+                if ($process::OUT === $type) {
+                    $tmp .= $data;
+                } else { // $process::ERR === $type
+                    $tmp .= $data;
+                }
+            }
+            return $tmp;
         }
     }
 
     public function AccessLog(Request $request){
-        $date_str = Carbon::today()->toDateString();
         $keyword = $request->input('keyword');
         $keyword_arr = explode(" ", $keyword);
         $grep_str = '';
+        $index = 0;
         foreach ($keyword_arr as &$value) {
-            $grep_str .= ' | grep "'.$value.'"';
-        }
-        $process = new Process('sudo cat /opt/zimbra/log/access_log.'.$date_str.$grep_str);
-        $process->start();
-        foreach ($process as $type => $data) {
-            if ($process::OUT === $type) {
-                return $data;
-            } else { // $process::ERR === $type
-                return $data;
+            if($index == 0){
+                $index++;
+                continue;
+            }else{
+                $grep_str .= ' | grep "'.$value.'"';
             }
+            $index++;
+        }
+
+        if($keyword_arr[0] != ''){
+            $tmp = '';
+            $process = new Process('sudo zgrep "'.$keyword_arr[0].'" /opt/zimbra/log/access_log* '.$grep_str);
+            $process->start();
+            foreach ($process as $type => $data) {
+                if ($process::OUT === $type) {
+                    $tmp .= $data;
+                } else { // $process::ERR === $type
+                    $tmp .= $data;
+                }
+            }
+            return $tmp;
         }
     }
 }
