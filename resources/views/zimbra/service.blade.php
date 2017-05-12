@@ -24,7 +24,7 @@
                         $('#service_restart').form('submit', {
                             url:'/all_srv_restart',
                             success:function(data){
-                                $.messager.alert('', data, 'info');
+                                $('#srv_restart_result').textbox('setText', data);
                                 $('#btnAllSrvRestart').linkbutton('enable');
                             }
                         });
@@ -34,28 +34,28 @@
         </script>
     </head>
     <body>
-		    <div id="inner_layout" class="easyui-layout" style="width:100%;height:565px;">
-            <form class="easyui-form" id="service_restart" name="service_restart" method="post">
-            {{ csrf_field() }}
-            <table>
-                <tr>
-                    <td>
-                        Zimbra 全部服務重啟
-                    </td>
-                    <td>
-                        <a href="javascript:void(0)" class="easyui-linkbutton" id="btnAllSrvRestart"
-                           name="btnAllSrvRestart" style="width:75px;height:32px" onclick="submitAllSrvRestart()">
-                           Restart
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <hr/>
-                    </td>
-                </tr>
-            </table>
-            </form>
-		    </div>
+        <form class="easyui-form" id="service_restart" name="service_restart" method="post">
+        {{ csrf_field() }}
+        <table>
+            <tr>
+                <td>
+                    Zimbra 全部服務重啟
+                </td>
+                <td>
+                    <a href="javascript:void(0)" class="easyui-linkbutton" id="btnAllSrvRestart"
+                       name="btnAllSrvRestart" style="width:75px;height:32px" onclick="submitAllSrvRestart()">
+                       Restart
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <hr/>
+                </td>
+            </tr>
+        </table>
+        </form>
+        <input class="easyui-textbox" id="srv_restart_result" name="srv_restart_result" style="width:100%;height:300px"
+               data-options="multiline:true,readonly:true"/>
     </body>
 </html>
