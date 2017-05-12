@@ -42,7 +42,7 @@
     </head>
     <body>
         <div id="main_layout" class="easyui-layout" style="width:100%;height:615px;">
-            <div id="zimbra" data-options="region:'west',split:true" title="zimbra"
+            <div id="zimbra" data-options="region:'west',split:true" title="Zimbra"
                   style="width:330px;padding:0px;overflow:hidden;height:100%">
                 <div id="gttPanels" class="easyui-accordion" fit="true" border="false" style="height:100%;">
                     <div title="帳號同步" style="padding:8px;overflow:auto;height:100%">
@@ -99,6 +99,10 @@
                         <div style="padding:10px;cursor:pointer;"
                              onClick="addTab('reboot', '系統重啟', '/reboot');">
                             <li style="font-size:16px;">系統重啟</li>
+                        </div>
+                        <div style="padding:10px;cursor:pointer;"
+                             onClick="addTab('service', '服務重啟', '/service');">
+                            <li style="font-size:16px;">服務重啟</li>
                         </div>
                     </div>
                 </div>

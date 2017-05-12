@@ -95,6 +95,11 @@ Route::group(['middleware' => 'account_check'], function () {
         return view('zimbra.zmexternalsync');
     });
 
+    Route::get('/service', function () {
+        session(['login_time' => Carbon::now()]);
+        return view('zimbra.service');
+    });
+
     //sync to zimbra
     Route::post('/sync_submit', 'SyncProcess@SyncToZimbra');
 
@@ -143,6 +148,9 @@ Route::group(['middleware' => 'account_check'], function () {
 
     //Ubuntu cancel shutdown specific
     Route::post('/cancel_shutdown_specific', 'SystemProcess@CancelShutdownSpecific');
+
+    //Zimbra Service Restart
+    Route::post('/all_srv_restart', 'ServiceRestart@AllSrvRestart');
 
     //Web - logut
     Route::get('/logout', 'Account@Logout');
