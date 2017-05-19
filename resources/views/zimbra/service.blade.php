@@ -92,7 +92,7 @@
         $(function(){
             Echo.channel('SrvRestartMsg')
                 .listen('ReceiveProcessMessageEvent', (e) => {
-                     var origin_data = $('#srv_restart_result').textbox('getText');
+                     var origin_data = $('#srv_restart_result').textbox('getText')."\n";
                      $('#srv_restart_result').textbox('setText', origin_data + e.message);
             });
         });
