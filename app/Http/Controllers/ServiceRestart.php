@@ -26,7 +26,7 @@ class ServiceRestart extends Controller
     }
 
     public function MtaSrvRestart(Request $request){
-        $process = new Process('su - zimbra -c "/opt/zimbra/bin/zmmtactl restart"');
+        $process = new Process('sudo su - zimbra -c "/opt/zimbra/bin/zmmtactl restart"');
         $process->setTimeout(300); // 5 minutes
         $process->start();
         foreach ($process as $type => $data) {
