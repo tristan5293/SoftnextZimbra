@@ -24,4 +24,18 @@ class ServiceRestart extends Controller
         }
         return '重啟完成';
     }
+
+    public function MtaSrvRestart(Request $request){
+        $process = new Process('su - zimbra -c "/opt/zimbra/bin/zmmtactl restart"');
+        $process->setTimeout(300); // 5 minutes
+        $process->start();
+        foreach ($process as $type => $data) {
+            if ($process::OUT === $type) {
+                event(new ReceiveProcessMessageEvent(trim($data)));
+            } else { // $process::ERR === $type
+                event(new ReceiveProcessMessageEvent(trim($data)));
+            }
+        }
+        return '重啟完成';
+    }
 }

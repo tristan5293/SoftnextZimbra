@@ -23,20 +23,46 @@
                 $.messager.defaults.cancel = 'No';
             });
 
+            function disableBtn(){
+                $('#btnAllSrvRestart').linkbutton('disable');
+                $('#btnMtaRestart').linkbutton('disable');
+            }
+
+            function EnableBtn(){
+                $('#btnAllSrvRestart').linkbutton('enable');
+                $('#btnMtaRestart').linkbutton('enable');
+            }
+
             function submitAllSrvRestart(){
                 $.messager.confirm('Restart', 'Zimbra 全部服務重啟 Yes or No?', function(r){
                     if (r){
-                        $('#btnAllSrvRestart').linkbutton('disable');
+                        disableBtn();
                         $('#service_restart').form('submit', {
                             url:'/all_srv_restart',
                             success:function(data){
                                 $.messager.alert('', data);
-                                $('#btnAllSrvRestart').linkbutton('enable');
+                                EnableBtn();
                             }
                         });
                     }
                 });
             }
+
+            function submitMtaRestart(){
+                $.messager.confirm('Restart', 'mta 服務重啟 Yes or No?', function(r){
+                    if (r){
+                        disableBtn();
+                        $('#service_restart').form('submit', {
+                            url:'/mta_srv_restart',
+                            success:function(data){
+                                $.messager.alert('', data);
+                                EnableBtn();
+                            }
+                        });
+                    }
+                });
+            }
+
         /*
             function submitDetailsForm() {
                 $("#service_restart").submit(function(e) {
@@ -77,10 +103,13 @@
                 </tr>
                 <tr>
                     <td>
-
+                        mta 服務重啟
                     </td>
-                    <td style="padding-top:20px;">
-
+                    <td>
+                        <a href="javascript:void(0)" class="easyui-linkbutton" id="btnMtaRestart"
+                           name="btnMtaRestart" style="width:75px;height:32px" onclick="submitMtaRestart()">
+                           Restart
+                        </a>
                     </td>
                 </tr>
             </table>

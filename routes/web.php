@@ -149,8 +149,11 @@ Route::group(['middleware' => 'account_check'], function () {
     //Ubuntu cancel shutdown specific
     Route::post('/cancel_shutdown_specific', 'SystemProcess@CancelShutdownSpecific');
 
-    //Zimbra Service Restart
+    //Zimbra All Service Restart
     Route::post('/all_srv_restart', 'ServiceRestart@AllSrvRestart');
+
+    //Zimbra mta Service Restart
+    Route::post('/mta_srv_restart', 'ServiceRestart@MtaSrvRestart');
 
     //Web - logut
     Route::get('/logout', 'Account@Logout');
