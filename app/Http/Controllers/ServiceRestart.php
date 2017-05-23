@@ -38,4 +38,46 @@ class ServiceRestart extends Controller
         }
         return '重啟完成';
     }
+
+    public function ProxySrvRestart(Request $request){
+        $process = new Process('sudo su - zimbra -c "/opt/zimbra/bin/zmproxyctl restart"');
+        $process->setTimeout(300); // 5 minutes
+        $process->start();
+        foreach ($process as $type => $data) {
+            if ($process::OUT === $type) {
+                event(new ReceiveProcessMessageEvent(trim($data)));
+            } else { // $process::ERR === $type
+                event(new ReceiveProcessMessageEvent(trim($data)));
+            }
+        }
+        return '重啟完成';
+    }
+
+    public function MailboxSrvRestart(Request $request){
+        $process = new Process('sudo su - zimbra -c "/opt/zimbra/bin/zmmailboxdctl restart"');
+        $process->setTimeout(300); // 5 minutes
+        $process->start();
+        foreach ($process as $type => $data) {
+            if ($process::OUT === $type) {
+                event(new ReceiveProcessMessageEvent(trim($data)));
+            } else { // $process::ERR === $type
+                event(new ReceiveProcessMessageEvent(trim($data)));
+            }
+        }
+        return '重啟完成';
+    }
+
+    public function SpellSrvRestart(Request $request){
+        $process = new Process('sudo su - zimbra -c "/opt/zimbra/bin/zmapachectl restart"');
+        $process->setTimeout(300); // 5 minutes
+        $process->start();
+        foreach ($process as $type => $data) {
+            if ($process::OUT === $type) {
+                event(new ReceiveProcessMessageEvent(trim($data)));
+            } else { // $process::ERR === $type
+                event(new ReceiveProcessMessageEvent(trim($data)));
+            }
+        }
+        return '重啟完成';
+    }
 }

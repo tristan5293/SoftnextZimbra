@@ -155,6 +155,15 @@ Route::group(['middleware' => 'account_check'], function () {
     //Zimbra mta Service Restart
     Route::post('/mta_srv_restart', 'ServiceRestart@MtaSrvRestart');
 
+    //Zimbra proxy Service Restart
+    Route::post('/proxy_srv_restart', 'ServiceRestart@ProxySrvRestart');
+
+    //Zimbra mailbox Service Restart
+    Route::post('/mailbox_srv_restart', 'ServiceRestart@MailboxSrvRestart');
+
+    //Zimbra spell Service Restart
+    Route::post('/spell_srv_restart', 'ServiceRestart@SpellSrvRestart');
+
     //Web - logut
     Route::get('/logout', 'Account@Logout');
     Route::get('/checkAutoLogout', 'Account@CheckAutoLogout');
