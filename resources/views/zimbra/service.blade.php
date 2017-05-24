@@ -22,7 +22,7 @@
                 $.messager.defaults.ok = 'Yes';
                 $.messager.defaults.cancel = 'No';
                 $('#srv_restart_result').textbox({
-                    height: $(window).height() - 220,
+                    height: $(window).height() - 250,
                 });
             });
 
@@ -199,11 +199,15 @@
                         </a>
                     </td>
                 </tr>
+                <tr>
+                    <td colspan="2">
+                        <div id="warning" style='color:#ff0000;'>@{{ message }}</div>
+                    </td>
+                </tr>
             </table>
         </form>
         <input class="easyui-textbox" id="srv_restart_result" name="srv_restart_result"
                style="width:100%;" data-options="multiline:true,readonly:true"/>
-        <div id="app"></div>
         <script language="javascript" type="text/javascript">
         $(function(){
             Echo.channel('SrvRestartMsg')
@@ -216,5 +220,13 @@
         <script>window.Laravel = <?php echo json_encode([ 'csrfToken' => csrf_token() ]); ?></script>
         <script type="text/javascript" src="/js/app.js"></script>
         <script type="text/javascript" src="/js/jquery.easyui.min.js"></script>
+        <script language="javascript" type="text/javascript">
+            new Vue({
+                el:'#warning',
+                data:{
+                    message:'警告：如果不確定，請與中華數位連絡確認'
+                }
+            });
+        </script>
     </body>
 </html>
