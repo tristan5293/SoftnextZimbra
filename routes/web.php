@@ -100,6 +100,11 @@ Route::group(['middleware' => 'account_check'], function () {
         return view('zimbra.service');
     });
 
+    Route::get('/admin_pwd_change', function () {
+        session(['login_time' => Carbon::now()]);
+        return view('zimbra.admin_pwd_change');
+    });
+
     //sync to zimbra
     Route::post('/sync_submit', 'SyncProcess@SyncToZimbra');
 
@@ -166,6 +171,12 @@ Route::group(['middleware' => 'account_check'], function () {
 
     //Zimbra spell Service Restart
     Route::post('/spell_srv_restart', 'ServiceRestart@SpellSrvRestart');
+
+    //admin pwd change
+    Route::post('/pwdChange', 'AdminPWDChange@PWDChange');
+
+    //admin pwd reset
+    Route::get('/pwdReset', 'AdminPWDChange@PWDReset');
 
     //Web - logut
     Route::get('/logout', 'Account@Logout');

@@ -10,4 +10,5 @@ return [
 	'login_submit'  	  			 	  	 					=> '登入',
 	'cookie_account' 	   				  	 					=> '記住帳號',
   'required'       	   				  	 					=> '請輸入資料', //for easyui - missingMessage
+	'account_error' 	   				  	 					=> '帳號密碼錯誤',
 ];

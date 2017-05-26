@@ -111,6 +111,12 @@
                             <li style="font-size:16px;">服務重啟</li>
                         </div>
                     </div>
+                    <div title="系統設定" style="padding:8px;overflow:auto;height:100%">
+                        <div style="padding:8px;cursor:pointer;" onClick="addTab('admin_pwd_change',
+                             '更改管理者密碼', '/admin_pwd_change');">
+                            <li style="font-size:16px;">更改管理者密碼</li>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div data-options="region:'center'" title="">
