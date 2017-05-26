@@ -104,6 +104,9 @@ Route::group(['middleware' => 'account_check'], function () {
     Route::post('/sync_submit', 'SyncProcess@SyncToZimbra');
 
     //return view
+    Route::get('/ldapsync', 'SyncXMLParser@XMLParserToView');
+
+    //return view
     Route::get('/tcp_ipv4', 'NetworkConfig@ViewNetwrokConfig');
 
     //return view

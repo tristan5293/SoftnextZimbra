@@ -56,7 +56,7 @@
         			<tr>
             			<td align="center">
                 			<h1 style="font-size:26px;color:#3b65b5;">
-                          Zimbra
+                          <img src="{{ asset('image/eTool.png') }}">
                       </h1>
             			</td>
         			</tr>
