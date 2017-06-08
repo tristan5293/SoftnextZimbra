@@ -9,6 +9,7 @@ use Symfony\Component\Process\Exception\ProcessFailedException;
 
 use App\TimeServerList;
 use App\LocalTime;
+use Storage;
 
 class DateTimeProcess extends Controller
 {
@@ -57,6 +58,7 @@ class DateTimeProcess extends Controller
         if (!$process->isSuccessful()) {
             throw new ProcessFailedException($process);
         }
+        Storage::append('/var/log/syslog', trim($process->getOutput()).' [E-Tool]'."\n");
         return $process->getOutput();
     }
 

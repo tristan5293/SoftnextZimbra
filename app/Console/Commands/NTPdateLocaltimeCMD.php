@@ -8,6 +8,7 @@ use Symfony\Component\Process\Process;
 use Symfony\Component\Process\Exception\ProcessFailedException;
 
 use App\LocalTime;
+use Storage;
 
 class NTPdateLocaltimeCMD extends Command
 {
@@ -48,6 +49,7 @@ class NTPdateLocaltimeCMD extends Command
         if (!$process->isSuccessful()) {
             throw new ProcessFailedException($process);
         }
-        $this->info($process->getOutput());
+        //$this->info($process->getOutput());
+        Storage::append('/var/log/syslog', trim($process->getOutput()).' [E-Tool]'."\n");
     }
 }
