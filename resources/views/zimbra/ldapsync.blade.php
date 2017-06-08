@@ -63,7 +63,7 @@
                 </td>
                 <td>
                     <input class="easyui-textbox" id="master_search_base" name="master_search_base" value="{{ $master_search_base }}"
-                           style="width:300px;height:32px" prompt="dc=softnext,dc=com,dc=tw" data-options="">
+                           style="width:900px;height:32px" prompt="dc=softnext,dc=com,dc=tw" data-options="">
                 </td>
             </tr>
             <tr>
