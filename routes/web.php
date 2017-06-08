@@ -117,6 +117,9 @@ Route::group(['middleware' => 'account_check'], function () {
     //return view
     Route::get('/reboot', 'SystemProcess@ViewReboot');
 
+    //ldapsync data save to xml file
+    Route::post('/ldapsync_data', 'SyncXMLParser@DataSaveToSyncXML');
+
     //network config - update
     Route::post('/update_network_config', 'NetworkConfig@UpdateNetwrokConfig');
 
