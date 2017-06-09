@@ -37,7 +37,7 @@ class DateTimeProcess extends Controller
             throw new ProcessFailedException($process2);
         }
 
-        $process3 = new Process('sudo shutdown -r 0');
+        $process3 = new Process('sudo reboot');
         $process3->run();
         if (!$process3->isSuccessful()) {
             throw new ProcessFailedException($process3);
