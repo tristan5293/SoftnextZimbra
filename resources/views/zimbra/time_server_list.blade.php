@@ -130,13 +130,16 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td colspan="2">
                         <a href="javascript:void(0)" class="easyui-linkbutton" id="btnSubmit"
                            style="width:75px;height:32px" onclick="submitForm()">
                            確定
                         </a>
                     </td>
-                    <td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div style='color:#ff0000;'>說明：系統會自動於每日的 00:00 與上述主機校時，請自行確認網路是否正常。</div>
                     </td>
                 </tr>
             </form>

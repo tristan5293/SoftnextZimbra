@@ -130,4 +130,34 @@ class LogProcess extends Controller
             return $tmp;
         }
     }
+
+    public function SysLog(Request $request){
+        $keyword = $request->input('keyword');
+        $keyword_arr = explode(" ", $keyword);
+        $grep_str = '';
+        $index = 0;
+        foreach ($keyword_arr as &$value) {
+            if($index == 0){
+                $index++;
+                continue;
+            }else{
+                $grep_str .= ' | grep "'.$value.'"';
+            }
+            $index++;
+        }
+
+        if($keyword_arr[0] != ''){
+            $tmp = '';
+            $process = new Process('sudo zgrep "'.$keyword_arr[0].'" /var/log/syslog* '.$grep_str);
+            $process->start();
+            foreach ($process as $type => $data) {
+                if ($process::OUT === $type) {
+                    $tmp .= $data;
+                } else { // $process::ERR === $type
+                    $tmp .= $data;
+                }
+            }
+            return $tmp;
+        }
+    }
 }

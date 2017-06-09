@@ -18,10 +18,10 @@
                 });
 		        });
 
-            function submitCheckZimbraLog(){
+            function submitCheckSysLog(){
                 $('#btnSubmit').linkbutton('disable');
-                $('#zimbra_log_form').form('submit', {
-                    url:'/checkZimbraLog',
+                $('#sys_log_form').form('submit', {
+                    url:'/checkSysLog',
                     success:function(data){
                         $('#result').textbox('setText', data);
                         $('#btnSubmit').linkbutton('enable');
@@ -31,18 +31,18 @@
         </script>
     </head>
     <body>
-        <form class="easyui-form" id="zimbra_log_form" name="zimbra_log_form" method="post">
+        <form class="easyui-form" id="sys_log_form" name="sys_log_form" method="post">
         {{ csrf_field() }}
         <table>
             <tr>
                 <td>
-                    zimbra log
+                    syslog
                 </td>
                 <td>
                     <input class="easyui-textbox" id="keyword" name="keyword"
                            style="width:300px;height:32px" data-options="prompt:'請輸入欲查詢之關鍵字'">
                     <a href="javascript:void(0)" class="easyui-linkbutton" id="btnSubmit"
-                       style="width:75px;height:32px" onclick="submitCheckZimbraLog()">
+                       style="width:75px;height:32px" onclick="submitCheckSysLog()">
                        送出
                     </a>
                 </td>

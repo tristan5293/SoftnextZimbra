@@ -72,6 +72,10 @@
                              onClick="addTab('access_log', 'access.log', '/access_log');">
                             <li style="font-size:16px;">access.log&nbsp;(ActiveSync Log)</li>
                         </div>
+                        <div style="padding:10px;cursor:pointer;"
+                             onClick="addTab('sys_log', 'sys.log', '/sys_log');">
+                            <li style="font-size:16px;">syslog&nbsp;(系統紀錄)</li>
+                        </div>
                     </div>
                     <div title="硬碟空間及掛載檢查" style="padding:8px;overflow:auto;height:100%">
                         <div style="padding:10px;cursor:pointer;"
@@ -91,8 +95,8 @@
                             <li style="font-size:16px;">時區</li>
                         </div>
                         <div style="padding:10px;cursor:pointer;"
-                             onClick="addTab('localtime', '網際網路時間', '/localtime');">
-                            <li style="font-size:16px;">網際網路時間</li>
+                             onClick="addTab('localtime', '立即校時', '/localtime');">
+                            <li style="font-size:16px;">立即校時</li>
                         </div>
                         <div style="padding:10px;cursor:pointer;"
                              onClick="addTab('time_server_list', '校時伺服器清單', '/time_server_list');">

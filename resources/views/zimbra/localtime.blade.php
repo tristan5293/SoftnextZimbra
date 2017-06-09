@@ -61,7 +61,7 @@
         <table>
             <tr>
                 <td>
-                    校時 :
+                    立即校時 :
                 </td>
                 <td>
                     <select class="easyui-combobox" id="localtime" name="localtime"

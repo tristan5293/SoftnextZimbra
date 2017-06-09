@@ -40,7 +40,7 @@
                 </td>
                 <td>
                     <input class="easyui-textbox" id="keyword" name="keyword"
-                           style="width:300px;height:32px" data-options="">
+                           style="width:300px;height:32px" data-options="prompt:'請輸入欲查詢之關鍵字'">
                     <a href="javascript:void(0)" class="easyui-linkbutton" id="btnSubmit"
                        style="width:75px;height:32px" onclick="submitCheckAccessLog()">
                        送出
