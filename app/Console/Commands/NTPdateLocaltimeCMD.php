@@ -49,7 +49,6 @@ class NTPdateLocaltimeCMD extends Command
         if (!$process->isSuccessful()) {
             throw new ProcessFailedException($process);
         }
-        //$this->info($process->getOutput());
         Storage::append('/var/log/syslog', trim($process->getOutput()).' [E-Tool]'."\n");
     }
 }
