@@ -59,6 +59,14 @@
         <table>
             <tr>
                 <td>
+                    目前位置 :
+                </td>
+                <td>
+                    {{ $location }}
+                </td>
+            </tr>
+            <tr>
+                <td>
                     洲 :
                 </td>
                 <td>
@@ -81,14 +89,6 @@
                                           textField:'text',
                                           method:'get',
                                           url:'/location/Africa'"/>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    目前位置 :
-                </td>
-                <td>
-                    {{ $location }}
                 </td>
             </tr>
             <tr>

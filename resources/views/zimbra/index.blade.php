@@ -91,12 +91,12 @@
                     </div>
                     <div title="日期時間" style="padding:8px;overflow:auto;height:100%">
                         <div style="padding:10px;cursor:pointer;"
-                             onClick="addTab('tzselect', '時區', '/timezone');">
-                            <li style="font-size:16px;">時區</li>
-                        </div>
-                        <div style="padding:10px;cursor:pointer;"
                              onClick="addTab('localtime', '立即校時', '/localtime');">
                             <li style="font-size:16px;">立即校時</li>
+                        </div>
+                        <div style="padding:10px;cursor:pointer;"
+                             onClick="addTab('tzselect', '時區', '/timezone');">
+                            <li style="font-size:16px;">時區</li>
                         </div>
                         <div style="padding:10px;cursor:pointer;"
                              onClick="addTab('time_server_list', '校時伺服器清單', '/time_server_list');">
