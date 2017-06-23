@@ -45,7 +45,7 @@
                 </td>
                 <td>
                     <input class="easyui-textbox" id="master_url" name="master_url" value="{{ $master_url }}"
-                           style="width:300px;height:32px" prompt="ldap://192.168.1.1:389" data-options="">
+                           style="width:350px;height:32px" prompt="ldap://192.168.1.1:389" data-options="">
                 </td>
             </tr>
             <tr>
@@ -54,7 +54,7 @@
                 </td>
                 <td>
                     <input class="easyui-textbox" id="master_filter" name="master_filter" value="{{ $master_filter }}"
-                           style="width:300px;height:32px" prompt="objectClass=Person" data-options="">
+                           style="width:350px;height:32px" prompt="objectClass=Person" data-options="">
                 </td>
             </tr>
             <tr>
@@ -63,7 +63,7 @@
                 </td>
                 <td>
                     <input class="easyui-textbox" id="master_search_base" name="master_search_base" value="{{ $master_search_base }}"
-                           style="width:900px;height:32px" prompt="dc=softnext,dc=com,dc=tw" data-options="">
+                           style="width:350px;height:32px" prompt="dc=softnext,dc=com,dc=tw" data-options="">
                 </td>
             </tr>
             <tr>
@@ -72,7 +72,7 @@
                 </td>
                 <td>
                     <input class="easyui-textbox" id="master_bind_user" name="master_bind_user" value="{{ $master_bind_user }}"
-                           style="width:300px;height:32px" prompt="administrator" data-options="">
+                           style="width:350px;height:32px" prompt="administrator" data-options="">
                 </td>
             </tr>
             <tr>
@@ -81,7 +81,7 @@
                 </td>
                 <td>
                     <input class="easyui-textbox" id="master_bind_password" name="master_bind_password" value="{{ $master_bind_password }}"
-                           style="width:300px;height:32px" prompt="123456" data-options="">
+                           style="width:350px;height:32px" prompt="123456" data-options="">
                 </td>
             </tr>
             <tr>
@@ -90,7 +90,7 @@
                 </td>
                 <td>
                     <input class="easyui-textbox" id="master_bind_timeout" name="master_bind_timeout" value="{{ $master_bind_timeout }}"
-                           style="width:300px;height:32px" prompt="200" data-options="">
+                           style="width:350px;height:32px" prompt="200" data-options="">
                 </td>
             </tr>
             <tr>
@@ -99,7 +99,7 @@
                 </td>
                 <td>
                     <input class="easyui-textbox" id="log_level" name="log_level" value="{{ $log_level }}"
-                           style="width:300px;height:32px" prompt="2" data-options="">
+                           style="width:350px;height:32px" prompt="2" data-options="">
                 </td>
             </tr>
             <tr>
@@ -108,7 +108,7 @@
                 </td>
                 <td>
                     <input class="easyui-textbox" id="local_ignore" name="local_ignore" value="{{ $local_ignore }}"
-                           style="width:900px;height:32px" prompt="user1@softnext.com.tw,user2@softnext.com.tw" data-options="">
+                           style="width:350px;height:32px" prompt="user1@softnext.com.tw,user2@softnext.com.tw" data-options="">
                 </td>
             </tr>
             <tr>
@@ -117,7 +117,7 @@
                 </td>
                 <td>
                     <input class="easyui-textbox" id="master_ignore" name="master_ignore" value="{{ $master_ignore }}"
-                           style="width:900px;height:32px" prompt="user1@softnext.com.tw,user2@softnext.com.tw" data-options="">
+                           style="width:350px;height:32px" prompt="user1@softnext.com.tw,user2@softnext.com.tw" data-options="">
                 </td>
             </tr>
             <tr>
@@ -127,7 +127,7 @@
                 <td>
                     <input class="easyui-textbox" id="attribute_map_attr_displayName" value="{{ $attribute_map_attr_displayName }}"
                            name="attribute_map_attr_displayName" prompt="cn"
-                           style="width:300px;height:32px" data-options="">
+                           style="width:350px;height:32px" data-options="">
                 </td>
             </tr>
             <tr>

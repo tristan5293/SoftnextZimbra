@@ -36,7 +36,7 @@
         <table>
             <tr>
                 <td>
-                    syslog
+                    作業系統紀錄
                 </td>
                 <td>
                     <input class="easyui-textbox" id="keyword" name="keyword"

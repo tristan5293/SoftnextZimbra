@@ -38,7 +38,7 @@
                 <td>
                     <a href="javascript:void(0)" class="easyui-linkbutton" id="btnSubmit"
                        style="width:150px;height:32px" onclick="submitZimbraMountCheck()">
-                       Zimbra掛載檢查
+                       檔案系統掛載檢查
                     </a>
                 </td>
             </tr>

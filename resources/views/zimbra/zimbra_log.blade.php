@@ -36,7 +36,7 @@
         <table>
             <tr>
                 <td>
-                    zimbra log
+                    外部信件傳送紀錄
                 </td>
                 <td>
                     <input class="easyui-textbox" id="keyword" name="keyword"

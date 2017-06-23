@@ -42,48 +42,48 @@
     </head>
     <body>
         <div id="main_layout" class="easyui-layout" style="width:100%;height:615px;">
-            <div id="zimbra" data-options="region:'west',split:true" title="ETool"
+            <div id="zimbra" data-options="region:'west',split:true" title="E-Tool 郵件工具包"
                   style="width:330px;padding:0px;overflow:hidden;height:100%">
                 <div id="gttPanels" class="easyui-accordion" fit="true" border="false" style="height:100%;">
                     <div title="帳號同步" style="padding:8px;overflow:auto;height:100%">
                         <div style="padding:10px;cursor:pointer;"
-                             onClick="addTab('zmexternalsync', '帳號同步', '/zmexternalsync');">
-                            <li style="font-size:16px;">帳號同步</li>
+                             onClick="addTab('zmexternalsync', '立即同步', '/zmexternalsync');">
+                            <li style="font-size:16px;">立即同步</li>
                         </div>
                         <div style="padding:10px;cursor:pointer;"
                              onClick="addTab('ldapsync', '同步設定', '/ldapsync');">
                             <li style="font-size:16px;">同步設定</li>
                         </div>
                     </div>
-                    <div title="Log查詢" style="padding:8px;overflow:auto;height:100%">
+                    <div title="事件紀錄檢視" style="padding:8px;overflow:auto;height:100%">
                         <div style="padding:10px;cursor:pointer;"
-                             onClick="addTab('zimbra_log', 'zimbra.log', '/zimbra_log');">
-                            <li style="font-size:16px;">zimbra.log&nbsp;(外部信件記錄)</li>
+                             onClick="addTab('zimbra_log', '外部信件傳送紀錄', '/zimbra_log');">
+                            <li style="font-size:16px;">外部信件傳送紀錄</li>
                         </div>
                         <div style="padding:10px;cursor:pointer;"
-                             onClick="addTab('mailbox_log', 'mailbox.log', '/mailbox_log');">
-                            <li style="font-size:16px;">mailbox.log&nbsp;(內部信件記錄)</li>
+                             onClick="addTab('mailbox_log', '內部信件收發紀錄', '/mailbox_log');">
+                            <li style="font-size:16px;">內部信件收發紀錄</li>
                         </div>
                         <div style="padding:10px;cursor:pointer;"
-                             onClick="addTab('audit_log', 'audit.log', '/audit_log');">
-                            <li style="font-size:16px;">audit.log&nbsp;(POP3 log)</li>
+                             onClick="addTab('audit_log', 'POP3認證紀錄', '/audit_log');">
+                            <li style="font-size:16px;">POP3認證紀錄</li>
                         </div>
                         <div style="padding:10px;cursor:pointer;"
-                             onClick="addTab('access_log', 'access.log', '/access_log');">
-                            <li style="font-size:16px;">access.log&nbsp;(ActiveSync Log)</li>
+                             onClick="addTab('access_log', 'WebMail及手持裝置紀錄', '/access_log');">
+                            <li style="font-size:16px;">WebMail及手持裝置紀錄</li>
                         </div>
                         <div style="padding:10px;cursor:pointer;"
-                             onClick="addTab('sys_log', 'sys.log', '/sys_log');">
-                            <li style="font-size:16px;">syslog&nbsp;(系統紀錄)</li>
-                        </div>
-                    </div>
-                    <div title="硬碟空間及掛載檢查" style="padding:8px;overflow:auto;height:100%">
-                        <div style="padding:10px;cursor:pointer;"
-                             onClick="addTab('mount_check', 'Zimbra掛載檢查', '/mount_check');">
-                            <li style="font-size:16px;">Zimbra掛載檢查</li>
+                             onClick="addTab('sys_log', '作業系統紀錄', '/sys_log');">
+                            <li style="font-size:16px;">作業系統紀錄</li>
                         </div>
                     </div>
-                    <div title="連線設定" style="padding:8px;overflow:auto;height:100%">
+                    <div title="系統資訊" style="padding:8px;overflow:auto;height:100%">
+                        <div style="padding:10px;cursor:pointer;"
+                             onClick="addTab('mount_check', '檔案系統掛載檢查', '/mount_check');">
+                            <li style="font-size:16px;">檔案系統掛載檢查</li>
+                        </div>
+                    </div>
+                    <div title="網路介面設定" style="padding:8px;overflow:auto;height:100%">
                         <div style="padding:10px;cursor:pointer;"
                              onClick="addTab('tcp_ipv4', 'TCP/IPv4', '/tcp_ipv4');">
                             <li style="font-size:16px;">TCP/IPv4</li>
@@ -103,14 +103,14 @@
                             <li style="font-size:16px;">校時伺服器清單</li>
                         </div>
                     </div>
-                    <div title="系統重啟" style="padding:8px;overflow:auto;height:100%">
+                    <div title="重新啟動系統" style="padding:8px;overflow:auto;height:100%">
                         <div style="padding:10px;cursor:pointer;"
-                             onClick="addTab('reboot', '系統重啟', '/reboot');">
-                            <li style="font-size:16px;">系統重啟</li>
+                             onClick="addTab('reboot', '重新啟動系統', '/reboot');">
+                            <li style="font-size:16px;">重新啟動系統</li>
                         </div>
                         <div style="padding:10px;cursor:pointer;"
-                             onClick="addTab('service', '服務重啟', '/service');">
-                            <li style="font-size:16px;">服務重啟</li>
+                             onClick="addTab('service', '重新啟動服務', '/service');">
+                            <li style="font-size:16px;">重新啟動服務</li>
                         </div>
                     </div>
                     <div title="系統設定" style="padding:8px;overflow:auto;height:100%">

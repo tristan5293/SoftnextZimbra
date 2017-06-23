@@ -36,7 +36,7 @@
         <table>
             <tr>
                 <td>
-                    audit log
+                    POP3認證紀錄
                 </td>
                 <td>
                     <input class="easyui-textbox" id="keyword" name="keyword"

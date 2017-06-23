@@ -38,7 +38,7 @@
                 <td>
                     <a href="javascript:void(0)" class="easyui-linkbutton" id="btnSubmitSync"
                        style="width:75px;height:32px" onclick="submitSync()">
-                       帳號同步
+                       立即同步
                     </a>
                 </td>
             </tr>
