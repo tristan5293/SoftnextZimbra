@@ -110,6 +110,11 @@ Route::group(['middleware' => 'account_check'], function () {
         return view('zimbra.admin_pwd_change');
     });
 
+    Route::get('/product_info', function () {
+        session(['login_time' => Carbon::now()]);
+        return view('zimbra.product_info');
+    });
+
     //sync to zimbra
     Route::post('/sync_submit', 'SyncProcess@SyncToZimbra');
 

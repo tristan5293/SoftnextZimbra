@@ -119,6 +119,12 @@
                             <li style="font-size:16px;">更改管理者密碼</li>
                         </div>
                     </div>
+                    <div title="產品資訊" style="padding:8px;overflow:auto;height:100%">
+                        <div style="padding:8px;cursor:pointer;" onClick="addTab('product_info',
+                             '產品資訊', '/product_info');">
+                            <li style="font-size:16px;">產品資訊</li>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div data-options="region:'center'" title="">
