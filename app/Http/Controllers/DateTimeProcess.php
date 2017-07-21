@@ -28,19 +28,22 @@ class DateTimeProcess extends Controller
         $process1 = new Process('sudo ln -sf /usr/share/zoneinfo/'.$zone.'/'.$country.' /etc/localtime');
         $process1->run();
         if (!$process1->isSuccessful()) {
-            throw new ProcessFailedException($process1);
+            //throw new ProcessFailedException($process1);
+            return $process1->getErrorOutput();
         }
 
         $process2 = new Process('echo "'.$zone.'/'.$country.'" | sudo tee /etc/timezone');
         $process2->run();
         if (!$process2->isSuccessful()) {
-            throw new ProcessFailedException($process2);
+            //throw new ProcessFailedException($process2);
+            return $process2->getErrorOutput();
         }
 
         $process3 = new Process('sudo reboot');
         $process3->run();
         if (!$process3->isSuccessful()) {
-            throw new ProcessFailedException($process3);
+            //throw new ProcessFailedException($process3);
+            return $process3->getErrorOutput();
         }
         return $process1->getOutput().'<br/>'.$process2->getOutput().'<br/>'.$process3->getOutput();
     }
@@ -56,7 +59,8 @@ class DateTimeProcess extends Controller
         $process = new Process('sudo ntpdate '.$data[$select_localtime-1]);
         $process->run();
         if (!$process->isSuccessful()) {
-            throw new ProcessFailedException($process);
+            //throw new ProcessFailedException($process);
+            return $process->getErrorOutput();
         }
         Storage::append('/var/log/syslog', trim($process->getOutput()).' [E-Tool]'."\n");
         return $process->getOutput();
