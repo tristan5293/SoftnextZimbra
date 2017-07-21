@@ -30,10 +30,10 @@
         </div>
         <div class="w3-container">
             <div class="w3-xlarge">
-                Softnext 網站：<a href="http://www.softnext-inc.com" target="_blank">http://www.softnext-inc.com</a>
+                公司網站：<a href="http://www.softnext-inc.com" target="_blank">http://www.softnext-inc.com</a>
             </div>
             <div class="w3-xlarge w3-padding-16">
-                電話：+886-2-25422526
+                公司電話：+886-2-25422526
             </div>
             <div class="w3-xlarge">
                 客服信箱：<a href="mailto:service@softnext-inc.com">service@softnext-inc.com</a>
