@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        @include('header')
+        <meta http-equiv="expires" content="Fri, 12 Jan 2001 18:18:18 GMT">
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+        <link rel="stylesheet" type="text/css" href="/css/easyui.css">
+        <link rel="stylesheet" type="text/css" href="/css/icon.css">
         <style>
             table, td {
                 border-collapse: collapse;
@@ -12,6 +17,7 @@
                 text-align: left;
             }
         </style>
+        <script type="text/javascript" src="/js/jquery.min.js"></script>
         <script type="text/javascript">
     	      $(function(){
                 currentLocalTime();
@@ -86,5 +92,16 @@
             </tr>
         </table>
         </form>
+        <script language="javascript" type="text/javascript">
+        $(function(){
+            Echo.channel('DelAttention')
+                .listen('ReceiveTimeSrvDelAttentionEvent', (e) => {
+                     $('#localtime').combobox('reload');
+            });
+        });
+        </script>
+        <script>window.Laravel = <?php echo json_encode([ 'csrfToken' => csrf_token() ]); ?></script>
+        <script type="text/javascript" src="/js/app.js"></script>
+        <script type="text/javascript" src="/js/jquery.easyui.min.js"></script>
     </body>
 </html>

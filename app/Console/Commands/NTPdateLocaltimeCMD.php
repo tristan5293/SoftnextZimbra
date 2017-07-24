@@ -47,8 +47,10 @@ class NTPdateLocaltimeCMD extends Command
         $process = new Process('sudo ntpdate '.$local_time->server_name);
         $process->run();
         if (!$process->isSuccessful()) {
-            throw new ProcessFailedException($process);
+            //throw new ProcessFailedException($process);
+            Storage::append('/var/log/syslog', trim($process->getErrorOutput()).' [E-Tool]'."\n");
+        }else{
+            Storage::append('/var/log/syslog', trim($process->getOutput()).' [E-Tool]'."\n");
         }
-        Storage::append('/var/log/syslog', trim($process->getOutput()).' [E-Tool]'."\n");
     }
 }

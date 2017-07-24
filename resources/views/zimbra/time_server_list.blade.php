@@ -63,6 +63,8 @@
                                 c.children('.spanTimeServerList').text($('#time_server_list').val());
                                 c.children('.btnTimeServerListDel').removeAttr('hidden');
                                 $('.clonedTimeServerList:last').after(c);
+                        }else{
+                            $.messager.alert('', '已加入');
                         }
                     }
                 });

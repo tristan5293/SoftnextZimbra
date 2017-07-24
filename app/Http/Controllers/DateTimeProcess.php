@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Symfony\Component\Process\Process;
 use Symfony\Component\Process\Exception\ProcessFailedException;
 
+use App\Events\ReceiveTimeSrvDelAttentionEvent;
 use App\TimeServerList;
 use App\LocalTime;
 use Storage;
@@ -18,6 +19,7 @@ class DateTimeProcess extends Controller
         $time_server_list = TimeServerList::find(1);
         $time_server_list->server_name = $time_server_list_str;
         $time_server_list->save();
+        event(new ReceiveTimeSrvDelAttentionEvent('delAttention'));
         return '設定完成';
     }
 
