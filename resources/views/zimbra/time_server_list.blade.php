@@ -66,6 +66,7 @@
                         }else{
                             $.messager.alert('', '已加入');
                         }
+                        $('#time_server_list').val('');
                     }
                 });
 
