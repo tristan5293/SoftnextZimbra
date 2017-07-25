@@ -24,14 +24,13 @@
 		        });
 
             function currentLocalTime(){
-                var param1 = new Date();
-                var param2 = param1.getFullYear() + '-' +
-                             (param1.getMonth() + 1) + '-' +
-                             param1.getDate() + ' ' +
-                             addZero(param1.getHours()) + ':' +
-                             addZero(param1.getMinutes()) + ':' +
-                             addZero(param1.getSeconds());
-                $('#lbltxtdate').text(param2)
+                axios.get('/api/get_server_time')
+                  .then(function (response) {
+                    $('#lbltxtdate').text(response.data);
+                  })
+                  .catch(function (error) {
+                    //console.log(error);
+                  });
                 setTimeout("currentLocalTime()", 1000);
             }
 
@@ -103,5 +102,6 @@
         <script>window.Laravel = <?php echo json_encode([ 'csrfToken' => csrf_token() ]); ?></script>
         <script type="text/javascript" src="/js/app.js"></script>
         <script type="text/javascript" src="/js/jquery.easyui.min.js"></script>
+        <script type="text/javascript" src="/js/axios.min.js"></script>
     </body>
 </html>
