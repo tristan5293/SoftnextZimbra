@@ -26,6 +26,7 @@ Route::get('/get_server_time', function () {
         //throw new ProcessFailedException($process2);
         return $process->getErrorOutput();
     }else{
-        return Carbon::now(trim($process->getOutput()));
+        date_default_timezone_set(trim($process->getOutput()));
+        return date("Y-m-d h:i:s");
     }
 });
