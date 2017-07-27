@@ -26,7 +26,14 @@ Route::get('/get_server_time', function () {
         //throw new ProcessFailedException($process2);
         return $process->getErrorOutput();
     }else{
-        date_default_timezone_set(trim($process->getOutput()));
-        return date("Y-m-d h:i:s");
+        $origin_timezone = trim($process->getOutput());
+        if(str_contains($origin_timezone, 'Americas')){
+            $new_timezone = str_replace('Americas', 'America', $origin_timezone);
+            date_default_timezone_set($new_timezone);
+            return date("Y-m-d h:i:s");
+        }else{
+            date_default_timezone_set($origin_timezone);
+            return date("Y-m-d h:i:s");
+        }
     }
 });
