@@ -39,6 +39,9 @@ class LogProcess extends Controller
                     $tmp .= $data;
                 }
             }
+            if($tmp == ''){
+                $tmp = '查無[\''.$keyword.'\']資料';
+            }
             return $tmp;
         }
     }
@@ -68,6 +71,9 @@ class LogProcess extends Controller
                     $tmp .= $data;
                 }
             }
+            if($tmp == ''){
+                $tmp = '查無[\''.$keyword.'\']資料';
+            }
             return $tmp;
         }
     }
@@ -96,6 +102,9 @@ class LogProcess extends Controller
                 } else { // $process::ERR === $type
                     $tmp .= $data;
                 }
+            }
+            if($tmp == ''){
+                $tmp = '查無[\''.$keyword.'\']資料';
             }
             return $tmp;
         }
@@ -127,6 +136,9 @@ class LogProcess extends Controller
                     $tmp .= $data;
                 }
             }
+            if($tmp == ''){
+                $tmp = '查無[\''.$keyword.'\']資料';
+            }
             return $tmp;
         }
     }
@@ -156,6 +168,9 @@ class LogProcess extends Controller
                 } else { // $process::ERR === $type
                     $tmp .= $data;
                 }
+            }
+            if($tmp == ''){
+                $tmp = '查無[\''.$keyword.'\']資料';
             }
             return $tmp;
         }
