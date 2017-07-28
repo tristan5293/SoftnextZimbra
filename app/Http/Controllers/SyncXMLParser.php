@@ -21,6 +21,13 @@ class SyncXMLParser extends Controller
         $master_ignore = $simplexml->masterIgnore;
         $attribute_map_attr_displayName = $simplexml->attributeMap->attr['master'][0];
 
+        if($local_ignore == ''){
+            $local_ignore = 'user1@softnext.com.tw';
+        }
+        if($master_ignore == ''){
+            $master_ignore = 'user1@softnext.com.tw';
+        }
+
         return view('zimbra.ldapsync', ['master_url' => $master_url,
                                         'master_filter' => $master_filter,
                                         'master_search_base' => $master_search_base,
@@ -44,6 +51,13 @@ class SyncXMLParser extends Controller
         $local_ignore = $request->input('local_ignore');
         $master_ignore = $request->input('master_ignore');
         $attribute_map_attr_displayName = $request->input('attribute_map_attr_displayName');
+
+        if($local_ignore == ''){
+            $local_ignore = 'user1@softnext.com.tw';
+        }
+        if($master_ignore == ''){
+            $master_ignore = 'user1@softnext.com.tw';
+        }
 
         $contents = Storage::get('/opt/zimbra/conf/ldapsync.xml');
         $simplexml = simplexml_load_string($contents);

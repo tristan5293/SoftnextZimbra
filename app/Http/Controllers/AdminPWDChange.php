@@ -26,7 +26,7 @@ class AdminPWDChange extends Controller
 
     public function PWDReset(Request $request)
     {
-        Users::where('account', '=', 'admin')->update(['password' => Hash::make('8888')]);
+        Users::where('account', '=', 'admin')->update(['password' => Hash::make('Admin!8888')]);
         return '更改成功';
     }
 }

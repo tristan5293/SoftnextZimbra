@@ -17,7 +17,7 @@ class UsersTableSeeder extends Seeder
         //create admin account, role:admin, edit, view
         $user = Users::create([
             		'account' => 'admin',
-            		'password' => Hash::make('8888'),
+            		'password' => Hash::make('Admin!8888'),
                 'last_login' => '2017-03-07 15:00:00',
                 'last_logout' => '2017-03-07 15:10:00',
         		]);
