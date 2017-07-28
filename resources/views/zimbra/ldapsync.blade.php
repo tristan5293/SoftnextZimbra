@@ -81,7 +81,7 @@
                 </td>
                 <td>
                     <input class="easyui-textbox" id="master_bind_password" name="master_bind_password" value="{{ $master_bind_password }}"
-                           style="width:350px;height:32px" prompt="123456" data-options="">
+                           style="width:350px;height:32px" type="password" prompt="123456" data-options="">
                 </td>
             </tr>
             <tr>
