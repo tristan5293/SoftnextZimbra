@@ -48,9 +48,17 @@ class NTPdateLocaltimeCMD extends Command
         $process->run();
         if (!$process->isSuccessful()) {
             //throw new ProcessFailedException($process);
-            Storage::append('/var/log/syslog', trim($process->getErrorOutput()).' [E-Tool]'."\n");
+            if(env('APP_OS') == "ubuntu"){
+                Storage::append('/var/log/syslog', trim($process->getErrorOutput()).' [E-Tool]'."\n");
+            }else{
+                Storage::append('/var/log/messages', trim($process->getErrorOutput()).' [E-Tool]'."\n");
+            }
         }else{
-            Storage::append('/var/log/syslog', trim($process->getOutput()).' [E-Tool]'."\n");
+            if(env('APP_OS') == "ubuntu"){
+                Storage::append('/var/log/syslog', trim($process->getOutput()).' [E-Tool]'."\n");
+            }else{
+                Storage::append('/var/log/messages', trim($process->getOutput()).' [E-Tool]'."\n");
+            }
         }
     }
 }

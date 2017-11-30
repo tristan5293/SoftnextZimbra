@@ -12,58 +12,62 @@ use Symfony\Component\Process\Exception\ProcessFailedException;
 class NetworkConfig extends Controller
 {
     public function ViewNetwrokConfig(Request $request){
-        $request->session()->put('login_time', Carbon::now());
-        $file_path = '/etc/network/interfaces';
-        $contents = Storage::get($file_path);
-        if(str_contains($contents, 'The primary network interface')){
-            $msg = '';
-            $data_arr = explode("\n", $contents);
-            $primary_network_key = false;
-            foreach ($data_arr as &$value) {
-                //先找到標題在取得內容
-                if(str_contains($value, 'The primary network interface')){
-                    $primary_network_key = true;
-                }
-                if($primary_network_key){
-                    if(str_contains($value, 'address')){
-                        $tmp = explode(" ", $value);
-                        $address = trim($tmp[1]);
+        if(env('APP_OS') == "ubuntu"){
+            $request->session()->put('login_time', Carbon::now());
+            $file_path = '/etc/network/interfaces';
+            $contents = Storage::get($file_path);
+            if(str_contains($contents, 'The primary network interface')){
+                $msg = '';
+                $data_arr = explode("\n", $contents);
+                $primary_network_key = false;
+                foreach ($data_arr as &$value) {
+                    //先找到標題在取得內容
+                    if(str_contains($value, 'The primary network interface')){
+                        $primary_network_key = true;
                     }
-                    if(str_contains($value, 'netmask')){
-                        $tmp = explode(" ", $value);
-                        $netmask = trim($tmp[1]);
-                    }
-                    if(str_contains($value, 'gateway')){
-                        $tmp = explode(" ", $value);
-                        $gateway = trim($tmp[1]);
-                    }
-                    if(str_contains($value, 'dns-nameservers')){
-                        $tmp = explode(" ", $value);
-                        $dns1 = $dns2 = '';
-                        $index = 0;
-                        foreach($tmp as &$val){
-                            if($index > 0){
-                                ${"dns".$index} = trim($val);
+                    if($primary_network_key){
+                        if(str_contains($value, 'address')){
+                            $tmp = explode(" ", $value);
+                            $address = trim($tmp[1]);
+                        }
+                        if(str_contains($value, 'netmask')){
+                            $tmp = explode(" ", $value);
+                            $netmask = trim($tmp[1]);
+                        }
+                        if(str_contains($value, 'gateway')){
+                            $tmp = explode(" ", $value);
+                            $gateway = trim($tmp[1]);
+                        }
+                        if(str_contains($value, 'dns-nameservers')){
+                            $tmp = explode(" ", $value);
+                            $dns1 = $dns2 = '';
+                            $index = 0;
+                            foreach($tmp as &$val){
+                                if($index > 0){
+                                    ${"dns".$index} = trim($val);
+                                }
+                                $index++;
                             }
-                            $index++;
                         }
                     }
                 }
+                return view('zimbra.conn_conf', ['address' => $address,
+                                                 'netmask' =>$netmask ,
+                                                 'gateway' => $gateway,
+                                                 'dns1' => $dns1,
+                                                 'dns2' => $dns2,
+                                                 'msg' => $msg]);
+            }else{
+                $msg = '尚未設定網路資訊';
+                return view('zimbra.conn_conf', ['address' => '',
+                                                 'netmask' =>'' ,
+                                                 'gateway' => '',
+                                                 'dns1' => '',
+                                                 'dns2' => '',
+                                                 'msg' => $msg]);
             }
-            return view('zimbra.conn_conf', ['address' => $address,
-                                             'netmask' =>$netmask ,
-                                             'gateway' => $gateway,
-                                             'dns1' => $dns1,
-                                             'dns2' => $dns2,
-                                             'msg' => $msg]);
         }else{
-            $msg = '尚未設定網路資訊';
-            return view('zimbra.conn_conf', ['address' => '',
-                                             'netmask' =>'' ,
-                                             'gateway' => '',
-                                             'dns1' => '',
-                                             'dns2' => '',
-                                             'msg' => $msg]);
+            return 'a';
         }
     }
 

@@ -64,7 +64,11 @@ class DateTimeProcess extends Controller
             //throw new ProcessFailedException($process);
             return $process->getErrorOutput();
         }
-        Storage::append('/var/log/syslog', trim($process->getOutput()).' [E-Tool]'."\n");
+        if(env('APP_OS') == "ubuntu"){
+            Storage::append('/var/log/syslog', trim($process->getOutput()).' [E-Tool]'."\n");
+        }else{
+            Storage::append('/var/log/messages', trim($process->getOutput()).' [E-Tool]'."\n");
+        }
         return $process->getOutput();
     }
 

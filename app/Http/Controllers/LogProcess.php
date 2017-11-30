@@ -160,7 +160,11 @@ class LogProcess extends Controller
 
         if($keyword_arr[0] != ''){
             $tmp = '';
-            $process = new Process('sudo zgrep -i "'.$keyword_arr[0].'" /var/log/syslog* '.$grep_str);
+            if(env('APP_OS') == "ubuntu"){
+                $process = new Process('sudo zgrep -i "'.$keyword_arr[0].'" /var/log/syslog* '.$grep_str);
+            }else{
+                $process = new Process('sudo zgrep -i "'.$keyword_arr[0].'" /var/log/messages* '.$grep_str);
+            }
             $process->start();
             foreach ($process as $type => $data) {
                 if ($process::OUT === $type) {
