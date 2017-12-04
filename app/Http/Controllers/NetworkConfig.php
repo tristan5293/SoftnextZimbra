@@ -67,7 +67,39 @@ class NetworkConfig extends Controller
                                                  'msg' => $msg]);
             }
         }else{
-            return 'a';
+            $request->session()->put('login_time', Carbon::now());
+            $file_path = '/etc/sysconfig/network-scripts/ifcfg-eth0';
+            $contents = Storage::get($file_path);
+            $data_arr = explode("\n", $contents);
+            $msg = '';
+            foreach ($data_arr as &$value) {
+                if(str_contains($value, 'IPADDR0')){
+                    $tmp = explode("=", $value);
+                    $address = trim($tmp[1]);
+                }
+                if(str_contains($value, 'NETMASK0')){
+                    $tmp = explode(" ", $value);
+                    $netmask = trim($tmp[1]);
+                }
+                if(str_contains($value, 'GATEWAY0')){
+                    $tmp = explode(" ", $value);
+                    $gateway = trim($tmp[1]);
+                }
+                if(str_contains($value, 'DNS1')){
+                    $tmp = explode(" ", $value);
+                    $dns1 = trim($tmp[1]);
+                }
+                if(str_contains($value, 'DNS2')){
+                    $tmp = explode(" ", $value);
+                    $dns2 = trim($tmp[1]);
+                }
+            }
+            return view('zimbra.conn_conf', ['address' => $address,
+                                             'netmask' =>$netmask ,
+                                             'gateway' => $gateway,
+                                             'dns1' => $dns1,
+                                             'dns2' => $dns2,
+                                             'msg' => $msg]);
         }
     }
 
