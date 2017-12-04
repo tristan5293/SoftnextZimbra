@@ -80,25 +80,25 @@ class NetworkConfig extends Controller
                     $address = '';
                 }
                 if(str_contains($value, 'NETMASK0')){
-                    $tmp = explode(" ", $value);
+                    $tmp = explode("=", $value);
                     $netmask = trim($tmp[1]);
                 }else{
                     $netmask = '';
                 }
                 if(str_contains($value, 'GATEWAY0')){
-                    $tmp = explode(" ", $value);
+                    $tmp = explode("=", $value);
                     $gateway = trim($tmp[1]);
                 }else{
                     $gateway = '';
                 }
                 if(str_contains($value, 'DNS1')){
-                    $tmp = explode(" ", $value);
+                    $tmp = explode("=", $value);
                     $dns1 = trim($tmp[1]);
                 }else{
                     $dns1 = '';
                 }
                 if(str_contains($value, 'DNS2')){
-                    $tmp = explode(" ", $value);
+                    $tmp = explode("=", $value);
                     $dns2 = trim($tmp[1]);
                 }else{
                     $dns2 = '';
