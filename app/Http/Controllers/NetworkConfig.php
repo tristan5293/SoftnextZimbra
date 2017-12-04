@@ -72,36 +72,31 @@ class NetworkConfig extends Controller
             $contents = Storage::get($file_path);
             $data_arr = explode("\n", $contents);
             $msg = '';
+            $address = '';
+            $netmask = '';
+            $gateway = '';
+            $dns1 = '';
+            $dns2 = '';
             foreach ($data_arr as &$value) {
                 if(str_contains($value, 'IPADDR0')){
                     $tmp = explode("=", $value);
                     $address = trim($tmp[1]);
-                }else{
-                    $address = '';
                 }
                 if(str_contains($value, 'NETMASK0')){
                     $tmp = explode("=", $value);
                     $netmask = trim($tmp[1]);
-                }else{
-                    $netmask = '';
                 }
                 if(str_contains($value, 'GATEWAY0')){
                     $tmp = explode("=", $value);
                     $gateway = trim($tmp[1]);
-                }else{
-                    $gateway = '';
                 }
                 if(str_contains($value, 'DNS1')){
                     $tmp = explode("=", $value);
                     $dns1 = trim($tmp[1]);
-                }else{
-                    $dns1 = '';
                 }
                 if(str_contains($value, 'DNS2')){
                     $tmp = explode("=", $value);
                     $dns2 = trim($tmp[1]);
-                }else{
-                    $dns2 = '';
                 }
             }
             return view('zimbra.conn_conf', ['address' => $address,
