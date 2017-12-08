@@ -22,7 +22,7 @@ class DateTimeProcess extends Controller
         event(new ReceiveTimeSrvDelAttentionEvent('delAttention'));
         return '設定完成';
     }
-
+    
     public function ZoneChange(Request $request){
         $zone = $request->input('zone');
         $country = $request->input('country');

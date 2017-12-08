@@ -1,17 +1,46 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Console\Commands;
 
-use Illuminate\Http\Request;
-
+use Illuminate\Console\Command;
 use Symfony\Component\Process\Process;
 use Symfony\Component\Process\Exception\ProcessFailedException;
 use Carbon\Carbon;
 use Storage;
 
-class SyncProcess extends Controller
+class SyncADAccount extends Command
 {
-    public function SyncToZimbra(Request $request){
+    /**
+     * The name and signature of the console command.
+     *
+     * @var string
+     */
+    protected $signature = 'sms:sync_ad_account';
+
+    /**
+     * The console command description.
+     *
+     * @var string
+     */
+    protected $description = 'AD帳號同步';
+
+    /**
+     * Create a new command instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
+    /**
+     * Execute the console command.
+     *
+     * @return mixed
+     */
+    public function handle()
+    {
         //開始同步
         try {
             if(env('APP_OS') == "ubuntu"){
@@ -41,9 +70,9 @@ class SyncProcess extends Controller
             if (!$process3->isSuccessful()) {
                 throw new ProcessFailedException($process3);
             }
-            return $process3->getOutput();
+            $this-info($process3->getOutput());
         } catch (ProcessFailedException $e) {
-            return $e->getMessage();
+            $this-info($e->getMessage());
         }
     }
 }

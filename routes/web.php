@@ -75,7 +75,7 @@ Route::group(['middleware' => 'account_check'], function () {
         $location = $process->getOutput();
         return view('zimbra.timezone', ['location' => $location]);
     });
-
+    
     Route::get('/localtime', function () {
         session(['login_time' => Carbon::now()]);
         return view('zimbra.localtime');

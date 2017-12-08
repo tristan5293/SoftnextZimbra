@@ -4,6 +4,8 @@ namespace App\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+use Carbon\Carbon;
+use Storage;
 
 class Kernel extends ConsoleKernel
 {
@@ -14,6 +16,7 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         \App\Console\Commands\NTPdateLocaltimeCMD::class,
+        \App\Console\Commands\SyncADAccount::class,
     ];
 
     /**
@@ -26,7 +29,20 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')
         //          ->hourly();
+        //每日校時
         $schedule->command('sms:ntpdate_localtime')->daily();
+        //每日2點自動帳號同步
+        $schedule->command('sms:sync_ad_account')
+                 ->withoutOverlapping()
+                 //->everyMinute()
+                 ->cron('0 2 * * *')
+                 ->after(function () {
+                     if(env('APP_OS') == "ubuntu"){
+                         Storage::append('/var/log/syslog', Carbon::now().' [E-Tool][Sync Account](Auto))'."\n");
+                     }else{
+                         Storage::append('/var/log/messages', Carbon::now().' [E-Tool][Sync Account](Auto))'."\n");
+                     }
+                 });
     }
 
     /**
