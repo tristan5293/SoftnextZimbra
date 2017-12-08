@@ -70,9 +70,9 @@ class SyncADAccount extends Command
             if (!$process3->isSuccessful()) {
                 throw new ProcessFailedException($process3);
             }
-            $this-info($process3->getOutput());
+            $this->info($process3->getOutput());
         } catch (ProcessFailedException $e) {
-            $this-info($e->getMessage());
+            $this->info($e->getMessage());
         }
     }
 }
