@@ -224,6 +224,30 @@ class NetworkConfig extends Controller
                 }
             }
             Storage::put($file_path, implode("\n", $data_arr));
+            //對/etc/hosts進行修改ip
+            $file_path = '/etc/hosts';
+            $contents = Storage::get($file_path);
+            if(str_contains($contents, $get_origin_ip[1])){
+                $index = -1;
+                $tmp_data = explode("\n", $contents);
+                foreach ($tmp_data as &$value) {
+                    $index++;
+                    if(str_contains($value, $get_origin_ip[1])){
+                        $index_2 = -1;
+                        $tmp_arr = explode(" ", $tmp_data[$index]);
+                        foreach ($tmp_arr as &$tmp_val) {
+                            $index_2++;
+                            if(str_contains($tmp_val, $get_origin_ip[1])){
+                                $tmp_arr[$index_2] = $ip;
+                                break;
+                            }
+                        }
+                        $tmp_data[$index] = implode(" ", $tmp_arr);
+                        break;
+                    }
+                }
+                Storage::put($file_path, implode("\n", $tmp_data));
+            }
             $process = new Process('sudo reboot');
             $process->run();
             // executes after the command finishes
