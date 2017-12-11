@@ -131,6 +131,7 @@ class NetworkConfig extends Controller
                     }
                     if($primary_network_key){
                         if(str_contains($value, 'address')){
+                            $get_origin_ip = explode(" ", $data_arr[$index]);
                             $data_arr[$index] = "address ".$ip;
                             continue;
                         }
@@ -150,7 +151,30 @@ class NetworkConfig extends Controller
                 }
                 Storage::put($file_path, implode("\n", $data_arr));
                 //$contents = Storage::get($file_path);
-
+                //對/etc/hosts進行修改ip
+                $file_path = '/etc/hosts';
+                $contents = Storage::get($file_path);
+                if(str_contains($contents, $get_origin_ip[1])){
+                    $index = -1;
+                    $tmp_data = explode("\n", $contents);
+                    foreach ($tmp_data as &$value) {
+                        $index++;
+                        if(str_contains($value, $get_origin_ip[1])){
+                            $index_2 = -1;
+                            $tmp_arr = explode(" ", $tmp_data[$index]);
+                            foreach ($tmp_arr as &$tmp_val) {
+                                $index_2++;
+                                if(str_contains($tmp_val, $get_origin_ip[1])){
+                                    $tmp_arr[$index_2] = $ip;
+                                    break;
+                                }
+                            }
+                            $tmp_data[$index] = implode(" ", $tmp_arr);
+                            break;
+                        }
+                    }
+                    Storage::put($file_path, implode("\n", $tmp_data));
+                }
                 //restart network
                 //$process = new Process('sudo ip addr flush ens33 && systemctl restart networking.service');
                 $process = new Process('sudo reboot');
@@ -161,7 +185,7 @@ class NetworkConfig extends Controller
                 }
                 return str_replace("\n","<br/>", $process->getOutput());
             }else{
-                //第一次設定網路
+                //第一次設定網路(當下設定完必，沒有重開是因為TSD還要做其他設定,ex:/etc/hosts)
                 Storage::append($file_path, "\n# The primary network interface");
                 Storage::append($file_path, "auto eth0");
                 Storage::append($file_path, "iface eth0 inet static");
