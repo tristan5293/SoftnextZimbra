@@ -203,6 +203,7 @@ class NetworkConfig extends Controller
             foreach ($data_arr as &$value) {
                 $index++;
                 if(str_contains($value, 'IPADDR0')){
+                    $get_origin_ip = explode("=", $data_arr[$index]);
                     $data_arr[$index] = "IPADDR0=".$ip;
                     continue;
                 }
