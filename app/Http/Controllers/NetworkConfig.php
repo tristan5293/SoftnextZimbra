@@ -161,7 +161,7 @@ class NetworkConfig extends Controller
                         $index++;
                         if(str_contains($value, $get_origin_ip[1])){
                             $index_2 = -1;
-                            $tmp_arr = explode(" ", $tmp_data[$index]);
+                            $tmp_arr = explode("\t", $tmp_data[$index]);
                             foreach ($tmp_arr as &$tmp_val) {
                                 $index_2++;
                                 if(str_contains($tmp_val, $get_origin_ip[1])){
@@ -169,7 +169,7 @@ class NetworkConfig extends Controller
                                     break;
                                 }
                             }
-                            $tmp_data[$index] = implode(" ", $tmp_arr);
+                            $tmp_data[$index] = implode("\t", $tmp_arr);
                             break;
                         }
                     }
@@ -225,7 +225,7 @@ class NetworkConfig extends Controller
                 }
             }
             Storage::put($file_path, implode("\n", $data_arr));
-            //對/etc/hosts進行修改ip
+            //對/etc/hosts進行修改ip, 使用tab去切，不用空白
             $file_path = '/etc/hosts';
             $contents = Storage::get($file_path);
             if(str_contains($contents, $get_origin_ip[1])){
@@ -235,7 +235,7 @@ class NetworkConfig extends Controller
                     $index++;
                     if(str_contains($value, $get_origin_ip[1])){
                         $index_2 = -1;
-                        $tmp_arr = explode(" ", $tmp_data[$index]);
+                        $tmp_arr = explode("\t", $tmp_data[$index]);
                         foreach ($tmp_arr as &$tmp_val) {
                             $index_2++;
                             if(str_contains($tmp_val, $get_origin_ip[1])){
@@ -243,7 +243,7 @@ class NetworkConfig extends Controller
                                 break;
                             }
                         }
-                        $tmp_data[$index] = implode(" ", $tmp_arr);
+                        $tmp_data[$index] = implode("\t", $tmp_arr);
                         break;
                     }
                 }
