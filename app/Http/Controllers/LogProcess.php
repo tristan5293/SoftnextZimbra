@@ -30,7 +30,8 @@ class LogProcess extends Controller
         }
         if($keyword_arr[0] != ''){
             $tmp = '';
-            $process = new Process('sudo zgrep -ai "'.$keyword_arr[0].'" /var/log/zimbra.log '.$grep_str);
+            $process = new Process('sudo zgrep -ai "'.$keyword_arr[0].'" /var/log/zimbra.log* '.$grep_str);
+            $process->setTimeout(600); // 10 minutes
             $process->start();
             foreach ($process as $type => $data) {
                 if ($process::OUT === $type) {
@@ -62,7 +63,8 @@ class LogProcess extends Controller
         }
         if($keyword_arr[0] != ''){
             $tmp = '';
-            $process = new Process('sudo zgrep -ai "'.$keyword_arr[0].'" /opt/zimbra/log/mailbox.log '.$grep_str);
+            $process = new Process('sudo zgrep -ai "'.$keyword_arr[0].'" /opt/zimbra/log/mailbox.log* '.$grep_str);
+            $process->setTimeout(600); // 10 minutes
             $process->start();
             foreach ($process as $type => $data) {
                 if ($process::OUT === $type) {
@@ -94,7 +96,8 @@ class LogProcess extends Controller
         }
         if($keyword_arr[0] != ''){
             $tmp = '';
-            $process = new Process('sudo zgrep -ai "'.$keyword_arr[0].'" /opt/zimbra/log/audit.log '.$grep_str);
+            $process = new Process('sudo zgrep -ai "'.$keyword_arr[0].'" /opt/zimbra/log/audit.log* '.$grep_str);
+            $process->setTimeout(600); // 10 minutes
             $process->start();
             foreach ($process as $type => $data) {
                 if ($process::OUT === $type) {
@@ -127,7 +130,8 @@ class LogProcess extends Controller
 
         if($keyword_arr[0] != ''){
             $tmp = '';
-            $process = new Process('sudo zgrep -ai "'.$keyword_arr[0].'" /opt/zimbra/log/access_log '.$grep_str);
+            $process = new Process('sudo zgrep -ai "'.$keyword_arr[0].'" /opt/zimbra/log/access_log* '.$grep_str);
+            $process->setTimeout(600); // 10 minutes
             $process->start();
             foreach ($process as $type => $data) {
                 if ($process::OUT === $type) {
@@ -161,10 +165,11 @@ class LogProcess extends Controller
         if($keyword_arr[0] != ''){
             $tmp = '';
             if(env('APP_OS') == "ubuntu"){
-                $process = new Process('sudo zgrep -ai "'.$keyword_arr[0].'" /var/log/syslog '.$grep_str);
+                $process = new Process('sudo zgrep -ai "'.$keyword_arr[0].'" /var/log/syslog* '.$grep_str);
             }else{
-                $process = new Process('sudo zgrep -ai "'.$keyword_arr[0].'" /var/log/messages '.$grep_str);
+                $process = new Process('sudo zgrep -ai "'.$keyword_arr[0].'" /var/log/messages* '.$grep_str);
             }
+            $process->setTimeout(600); // 10 minutes
             $process->start();
             foreach ($process as $type => $data) {
                 if ($process::OUT === $type) {
