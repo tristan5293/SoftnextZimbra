@@ -195,6 +195,7 @@ class LogProcess extends Controller
                 foreach ($collen_date_match as &$value) {
                     $str_syslog .= $value.' ';
                 }
+                $str_syslog .= '2>/dev/null'; //代表忽略掉错误提示信息。
                 $process = new Process('sudo zgrep -ai "'.$keyword_arr[0].'" '.$str_syslog.' '.$grep_str);
             }else{
                 //for centos
