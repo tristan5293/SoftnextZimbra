@@ -176,17 +176,17 @@ class LogProcess extends Controller
                 $dt2 = Carbon::create($to_arr[0], $to_arr[1], $to_arr[2], 0);
                 $search_date_range_arr = array();
                 $str_messages = '';
-                while($dt->gte($dt2)){
-                    $search_date_range_arr[] = $dt->year.str_pad($dt->month,2,'0',STR_PAD_LEFT).str_pad($dt->day,2,'0',STR_PAD_LEFT);
-                    $dt->subDay();
-                }
-                if($dt->eq($dt2)){
-                    $str_messages = '/var/log/messages';
-                }else{
+                if($dt->lt($dt2)){
+                    while($dt->lte($dt2)){
+                        $search_date_range_arr[] = $dt->year.str_pad($dt->month,2,'0',STR_PAD_LEFT).str_pad($dt->day,2,'0',STR_PAD_LEFT);
+                        $dt->subDay();
+                    }
                     foreach ($search_date_range_arr as &$value) {
                         $str_messages .= '/var/log/messages-'.$value.'.gz ';
                     }
                     $str_messages .= '2>/dev/null'; //代表忽略掉错误提示信息。
+                }else{
+                    $str_messages = '/var/log/messages';
                 }
                 $process = new Process('sudo zgrep -ai "'.$keyword_arr[0].'" '.$str_messages.' '.$grep_str);
             }
