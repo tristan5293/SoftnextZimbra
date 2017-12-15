@@ -179,7 +179,7 @@ class LogProcess extends Controller
                 if($dt->lt($dt2)){
                     while($dt->lte($dt2)){
                         $search_date_range_arr[] = $dt->year.str_pad($dt->month,2,'0',STR_PAD_LEFT).str_pad($dt->day,2,'0',STR_PAD_LEFT);
-                        $dt->subDay();
+                        $dt->addDay();
                     }
                     foreach ($search_date_range_arr as &$value) {
                         $str_messages .= '/var/log/messages-'.$value.'.gz ';
