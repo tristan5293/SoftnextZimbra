@@ -75,11 +75,6 @@
                 <td>
                     <input class="easyui-textbox" id="keyword" name="keyword"
                            style="width:300px;height:32px" data-options="prompt:'請輸入欲查詢之關鍵字'">
-                    搜尋範圍：
-                    從 <input id="send_date_form" name="send_date_form" class="easyui-datebox"
-                             style="width:120px;height:32px"></input>
-                    到 <input id="send_date_to" name="send_date_to" class="easyui-datebox"
-                             style="width:120px;height:32px"></input>
                     <a href="javascript:void(0)" class="easyui-linkbutton" id="btnSubmit"
                        style="width:75px;height:32px" onclick="submitCheckSysLog()">
                        送出
