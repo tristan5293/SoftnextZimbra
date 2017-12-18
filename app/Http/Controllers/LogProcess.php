@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Symfony\Component\Process\Process;
 use Symfony\Component\Process\Exception\ProcessFailedException;
 use Carbon\Carbon;
+use Storage;
 
 class LogProcess extends Controller
 {
@@ -181,6 +182,7 @@ class LogProcess extends Controller
                 $process_date_match->start();
                 foreach ($process_date_match as $type => $data) {
                     if ($process_date_match::OUT === $type) {
+                        Storage::disk('public')->append('log_debug.txt', $data."\n");
                         $tmp_arr = array();
                         $tmp_arr = explode("\t", $data);
                         $match_date = explode("-", $tmp_arr[0]);
@@ -195,6 +197,7 @@ class LogProcess extends Controller
                 foreach ($collen_date_match as &$value) {
                     $str_syslog .= $value.' ';
                 }
+                Storage::disk('public')->append('log_debug.txt', $str_syslog."\n");
                 $str_syslog .= '2>/dev/null'; //代表忽略掉错误提示信息。
                 $process = new Process('sudo zgrep -ai "'.$keyword_arr[0].'" '.$str_syslog.' '.$grep_str);
             }else{
