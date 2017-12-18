@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use Symfony\Component\Process\Process;
 use Symfony\Component\Process\Exception\ProcessFailedException;
 use Carbon\Carbon;
-use Storage;
 
 class LogProcess extends Controller
 {
@@ -169,7 +168,6 @@ class LogProcess extends Controller
         $to_arr = explode("-", $to);
         $dt = Carbon::create($from_arr[0], $from_arr[1], $from_arr[2], 0);
         $dt2 = Carbon::create($to_arr[0], $to_arr[1], $to_arr[2], 0);
-        $search_date_range_arr = array();
 
         if($keyword_arr[0] != ''){
             $tmp = '';
@@ -182,13 +180,19 @@ class LogProcess extends Controller
                 $process_date_match->start();
                 foreach ($process_date_match as $type => $data) {
                     if ($process_date_match::OUT === $type) {
-                        Storage::disk('public')->append('log_debug.txt', $data."\n");
                         $tmp_arr = array();
-                        $tmp_arr = explode("\t", $data);
-                        $match_date = explode("-", $tmp_arr[0]);
-                        $dt3 = Carbon::create($match_date[0], $match_date[1], $match_date[2], 0);
-                        if($dt->lte($dt3) && $dt3->lte($dt2)){
-                            $collen_date_match[] = $tmp_arr[1];
+                        $tmp_arr = explode("\n", $data);
+                        foreach ($tmp_arr as &$value) {
+                            if(!empty($value)){
+                                $tmp_arr2 = array();
+                                $tmp_arr2 = explode("\t", $value);
+                                $match_date = array();
+                                $match_date = explode("-", $tmp_arr2[0]);
+                                $dt3 = Carbon::create($match_date[0], $match_date[1], $match_date[2], 0);
+                                if($dt->lte($dt3) && $dt3->lte($dt2)){
+                                    $collen_date_match[] = $tmp_arr2[1];
+                                }
+                            }
                         }
                     } else { // $process::ERR === $type
                         //process error msg;
@@ -197,13 +201,13 @@ class LogProcess extends Controller
                 foreach ($collen_date_match as &$value) {
                     $str_syslog .= $value.' ';
                 }
-                Storage::disk('public')->append('log_debug.txt', $str_syslog."\n");
                 $str_syslog .= '2>/dev/null'; //代表忽略掉错误提示信息。
                 $process = new Process('sudo zgrep -ai "'.$keyword_arr[0].'" '.$str_syslog.' '.$grep_str);
             }else{
                 //for centos
                 //計算要搜尋的範圍日期
                 $str_messages = '';
+                $search_date_range_arr = array();
                 if($dt->lt($dt2)){
                     while($dt->lte($dt2)){
                         $search_date_range_arr[] = $dt->year.str_pad($dt->month,2,'0',STR_PAD_LEFT).str_pad($dt->day,2,'0',STR_PAD_LEFT);
