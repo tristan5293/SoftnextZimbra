@@ -43,12 +43,6 @@ class SyncADAccount extends Command
     {
         //開始同步
         try {
-            if(env('APP_OS') == "ubuntu"){
-                Storage::append('/var/log/syslog', Carbon::now().' [E-Tool][Sync Account](Manual))'."\n");
-            }else{
-                Storage::append('/var/log/messages', Carbon::now().' [E-Tool][Sync Account](Manual))'."\n");
-            }
-
             $process1 = new Process('sudo su - zimbra -c "/usr/bin/perl /opt/zimbra/bin/zmexternaldirsync"');
             $process1->run();
             if (!$process1->isSuccessful()) {
