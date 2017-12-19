@@ -22,7 +22,7 @@ class DateTimeProcess extends Controller
         event(new ReceiveTimeSrvDelAttentionEvent('delAttention'));
         return '設定完成';
     }
-    
+
     public function ZoneChange(Request $request){
         $zone = $request->input('zone');
         $country = $request->input('country');
@@ -65,9 +65,9 @@ class DateTimeProcess extends Controller
             return $process->getErrorOutput();
         }
         if(env('APP_OS') == "ubuntu"){
-            Storage::append('/var/log/syslog', trim($process->getOutput()).' [E-Tool]'."\n");
+            Storage::append('/var/log/syslog', trim($process->getOutput()).' [E-Tool][Sync Date](Manual)'."\n");
         }else{
-            Storage::append('/var/log/messages', trim($process->getOutput()).' [E-Tool]'."\n");
+            Storage::append('/var/log/messages', trim($process->getOutput()).' [E-Tool][Sync Date](Manual)'."\n");
         }
         return $process->getOutput();
     }
