@@ -22,7 +22,7 @@
                 <div class="w3-display-bottommiddle">
                     <div class="w3-tag w3-round w3-blue" style="padding:3px">
                         <div class="w3-tag w3-round w3-yellow w3-border w3-border-white">
-                            V 3.0
+                            V 2.1
                         </div>
                     </div>
                 </div>
