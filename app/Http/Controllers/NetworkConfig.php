@@ -225,6 +225,7 @@ class NetworkConfig extends Controller
                 }
             }
             Storage::put($file_path, implode("\n", $data_arr));
+            
             //對/etc/sysconfig/network進行修改gateway
             $file_path = '/etc/sysconfig/network';
             $contents = Storage::get($file_path);
@@ -238,6 +239,8 @@ class NetworkConfig extends Controller
                     break;
                 }
             }
+            Storage::put($file_path, implode("\n", $data_arr));
+
             //對/etc/hosts進行修改ip, 使用tab去切，不用空白
             $file_path = '/etc/hosts';
             $contents = Storage::get($file_path);
