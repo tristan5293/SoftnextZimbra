@@ -225,6 +225,19 @@ class NetworkConfig extends Controller
                 }
             }
             Storage::put($file_path, implode("\n", $data_arr));
+            //對/etc/sysconfig/network進行修改gateway
+            $file_path = '/etc/sysconfig/network';
+            $contents = Storage::get($file_path);
+            $index = -1;
+            $data_arr = array(); //clear array
+            $data_arr = explode("\n", $contents);
+            foreach ($data_arr as &$value) {
+                $index++;
+                if(str_contains($value, 'GATEWAY')){
+                    $data_arr[$index] = "GATEWAY=".$gateway;
+                    break;
+                }
+            }
             //對/etc/hosts進行修改ip, 使用tab去切，不用空白
             $file_path = '/etc/hosts';
             $contents = Storage::get($file_path);
