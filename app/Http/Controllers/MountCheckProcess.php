@@ -17,7 +17,7 @@ class MountCheckProcess extends Controller
         }
         $tmp1 = $process1->getOutput();
 
-        $process2 = new Process('sudo su - zimbra -c "df -h | grep zimbra"');
+        $process2 = new Process('sudo su - zimbra -c "df -h | grep mapper"');
         $process2->start();
         foreach ($process2 as $type => $data) {
             if ($process2::OUT === $type) {
