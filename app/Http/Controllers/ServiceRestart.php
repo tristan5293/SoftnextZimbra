@@ -17,9 +17,17 @@ class ServiceRestart extends Controller
         $process->start();
         foreach ($process as $type => $data) {
             if ($process::OUT === $type) {
-                event(new ReceiveProcessMessageEvent(trim($data)));
+                try {
+                    event(new ReceiveProcessMessageEvent(trim($data)));
+                } catch (\Exception $e) {
+                    //$e->getMessage();
+                }
             } else { // $process::ERR === $type
-                event(new ReceiveProcessMessageEvent(trim($data)));
+                try {
+                    event(new ReceiveProcessMessageEvent(trim($data)));
+                } catch (\Exception $e) {
+                    //$e->getMessage();
+                }
             }
         }
         return '重啟完成';
@@ -31,9 +39,17 @@ class ServiceRestart extends Controller
         $process->start();
         foreach ($process as $type => $data) {
             if ($process::OUT === $type) {
-                event(new ReceiveProcessMessageEvent(trim($data)));
+                try {
+                    event(new ReceiveProcessMessageEvent(trim($data)));
+                } catch (\Exception $e) {
+                    //$e->getMessage();
+                }
             } else { // $process::ERR === $type
-                event(new ReceiveProcessMessageEvent(trim($data)));
+                try {
+                    event(new ReceiveProcessMessageEvent(trim($data)));
+                } catch (\Exception $e) {
+                    //$e->getMessage();
+                }
             }
         }
         return '重啟完成';
@@ -45,9 +61,17 @@ class ServiceRestart extends Controller
         $process->start();
         foreach ($process as $type => $data) {
             if ($process::OUT === $type) {
-                event(new ReceiveProcessMessageEvent(trim($data)));
+                try {
+                    event(new ReceiveProcessMessageEvent(trim($data)));
+                } catch (\Exception $e) {
+                    //$e->getMessage();
+                }
             } else { // $process::ERR === $type
-                event(new ReceiveProcessMessageEvent(trim($data)));
+                try {
+                    event(new ReceiveProcessMessageEvent(trim($data)));
+                } catch (\Exception $e) {
+                    //$e->getMessage();
+                }
             }
         }
         return '重啟完成';
@@ -59,9 +83,17 @@ class ServiceRestart extends Controller
         $process->start();
         foreach ($process as $type => $data) {
             if ($process::OUT === $type) {
-                event(new ReceiveProcessMessageEvent(trim($data)));
+                try {
+                    event(new ReceiveProcessMessageEvent(trim($data)));
+                } catch (\Exception $e) {
+                    //$e->getMessage();
+                }
             } else { // $process::ERR === $type
-                event(new ReceiveProcessMessageEvent(trim($data)));
+                try {
+                    event(new ReceiveProcessMessageEvent(trim($data)));
+                } catch (\Exception $e) {
+                    //$e->getMessage();
+                }
             }
         }
         return '重啟完成';
@@ -73,9 +105,17 @@ class ServiceRestart extends Controller
         $process->start();
         foreach ($process as $type => $data) {
             if ($process::OUT === $type) {
-                event(new ReceiveProcessMessageEvent(trim($data)));
+                try {
+                    event(new ReceiveProcessMessageEvent(trim($data)));
+                } catch (\Exception $e) {
+                    //$e->getMessage();
+                }
             } else { // $process::ERR === $type
-                event(new ReceiveProcessMessageEvent(trim($data)));
+                try {
+                    event(new ReceiveProcessMessageEvent(trim($data)));
+                } catch (\Exception $e) {
+                    //$e->getMessage();
+                }
             }
         }
         return '重啟完成';

@@ -19,7 +19,11 @@ class DateTimeProcess extends Controller
         $time_server_list = TimeServerList::find(1);
         $time_server_list->server_name = $time_server_list_str;
         $time_server_list->save();
-        event(new ReceiveTimeSrvDelAttentionEvent('delAttention'));
+        try {
+            event(new ReceiveTimeSrvDelAttentionEvent('delAttention'));
+        } catch (\Exception $e) {
+            //$e->getMessage();
+        }
         return '設定完成';
     }
 
